@@ -31,7 +31,7 @@ const Contact = () => {
             <p className="mt-3 text-stone-500">
               Send a mail to:{" "}
               <Link
-                className="hover:text-white"
+                className="hover:text-stone-400 text-white"
                 to="mailto:kijewilliams01@gmail.com?subject=Hello%20There&body=I%20want%20to%20create%20a%20website">
                 kijewilliams01@gmail.com
               </Link>

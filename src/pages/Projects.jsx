@@ -10,24 +10,15 @@ import kijeLogo from "../Image/kije williams.png";
 const projects = [
   {
     id: 1,
-    title: "Apple Galaxy",
+    title: "Key Systems",
     description:
-      "The Apple Galaxy is a combination of the best of both worlds from two industry giants Apple and Samsung.",
-    techStack: "React.js & Tailwindcss",
-    link: "https://bejewelled-marigold-8aea56.netlify.app/",
-    github: "https://github.com/Kijeosowo/Apple-Galaxy",
+      "A pixel-perfect, fully responsive landing page built with ReactJS, TailwindCSS, and Framer Motion, faithfully implemented from KeySystems figma design.",
+    techStack: "React.js, Tailwindcss & Framer Motion",
+    link: "https://keysystems.netlify.app/",
+    github: "https://github.com/Kijeosowo/key-system",
   },
   {
     id: 2,
-    title: "Unsplash",
-    description:
-      "Unsplash is a personal web project designed to replicate the popular image gallery website Unsplash.",
-    techStack: "React.js, Tailwindcss & Unsplash API",
-    link: "https://kijeunsplash.netlify.app/",
-    github: "https://github.com/Kijeosowo/Unsplash",
-  },
-  {
-    id: 3,
     title: "Positivus",
     description:
       "A digital marketing agency helps businesses grow and succeed online through a range of services including SEO, PPC, social media marketing, and content creation.",
@@ -36,7 +27,34 @@ const projects = [
     github: "https://github.com/Kijeosowo/Positivus-Website",
   },
   {
+    id: 3,
+    title: "Travelsy",
+    description: "A Website built for a travel agency.",
+    techStack: "React.js, Tailwindcss",
+    link: "https://travelsyicedt.netlify.app/",
+    github: "https://github.com/Kijeosowo/icedt-test",
+  },
+  {
     id: 4,
+    title: "Unsplash",
+    description:
+      "Unsplash is a personal web project designed to replicate the popular image gallery website Unsplash.",
+    techStack: "React.js, Tailwindcss & Unsplash API",
+    link: "https://kijeunsplash.netlify.app/",
+    github: "https://github.com/Kijeosowo/Unsplash",
+  },
+  {
+    id: 5,
+    title: "Apple Galaxy",
+    description:
+      "The Apple Galaxy is a combination of the best of both worlds from two industry giants Apple and Samsung.",
+    techStack: "React.js & Tailwindcss",
+    link: "https://bejewelled-marigold-8aea56.netlify.app/",
+    github: "https://github.com/Kijeosowo/Apple-Galaxy",
+  },
+
+  {
+    id: 6,
     title: "Dara Williams",
     description: "A Portfolio website for a Product videographer.",
     techStack: "Html, Tailwindcss & JavaScript",
@@ -44,7 +62,7 @@ const projects = [
     github: "https://github.com/Kijeosowo/KEN-WILLIAMS",
   },
   {
-    id: 5,
+    id: 7,
     title: "Netflix Clone",
     description: "A replica of the Netflix streaming website.",
     techStack: "Html, Tailwindcss & JavaScript",
@@ -52,7 +70,7 @@ const projects = [
     github: "https://github.com/Kijeosowo/NETFLIX",
   },
   {
-    id: 6,
+    id: 8,
     title: "Shotr",
     description:
       "A link shortener web app that helps shorten links professionally.",
@@ -61,7 +79,7 @@ const projects = [
     github: "https://github.com/Kijeosowo/Shotr",
   },
   {
-    id: 7,
+    id: 9,
     title: "Taskify",
     description: "A Todo App that uses CRUD functionality.",
     techStack: "React.js & Tailwindcsss",
@@ -69,7 +87,7 @@ const projects = [
     github: "https://github.com/Kijeosowo/Todo-App-Second-semester-Exam",
   },
   {
-    id: 8,
+    id: 10,
     title: "Trackers",
     description:
       "A Shipping website that sends products to customers anywhere in the world.",
