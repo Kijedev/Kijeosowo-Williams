@@ -18,15 +18,14 @@ const Download = () => {
     .then((result) => console.log(result))
     .catch((error) => console.log("error", error));
   return (
-    <div>
-      <div className="ml-[8%] lg:ml-[6%] lg:mt-[3%] mt-[10%] border border-[#18181A] rounded-[5px] pt-2 pb-2 pl-10 pr-10 inline-flex justify-center items-center hover:bg-[#18181A] hover:text-white transition ease-in duration-300">
-        <a
-          href="/KIJEOSOWO_WILLIAMS.pdf"
-          download="Kijeosowo Williams.pdf"
-          className="inline-flex">
-          Download cv <AiOutlineCloudDownload className="mt-1 ml-2" />
-        </a>
-      </div>
+    <div className="rounded-[5px] py-2 px-10 lg:mx-20 mx-5 my-5 inline-flex justify-center items-center bg-white text-black hover:bg-[#ECE7E1] transition-colors duration-300 group">
+      <a
+        href="/KIJEOSOWO_WILLIAMS.pdf"
+        download="Kijeosowo Williams.pdf"
+        className="inline-flex">
+        Download cv{" "}
+        <AiOutlineCloudDownload className="mt-1 ml-2 group-hover:animate-bounce" />
+      </a>
     </div>
   );
 };

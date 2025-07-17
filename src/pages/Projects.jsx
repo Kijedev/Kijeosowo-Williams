@@ -1,19 +1,13 @@
-import React from "react";
-import image from "../Image/list.png";
-import { Link } from "react-router";
-import { FaGithub } from "react-icons/fa6";
-import { FaBookmark } from "react-icons/fa";
-import Icons from "../components/Icons";
-import { FiExternalLink } from "react-icons/fi";
-import kijeLogo from "../Image/kije williams.png";
+import Logo from "../components/Logo";
+import { TracingBeam } from "../components/ui/tracing-beam";
 
 const projects = [
   {
     id: 1,
     title: "Key Systems",
     description:
-      "A pixel-perfect, fully responsive landing page built with ReactJS, TailwindCSS, and Framer Motion, faithfully implemented from KeySystems figma design.",
-    techStack: "React.js, Tailwindcss & Framer Motion",
+      "A pixel-perfect, fully responsive landing page built with ReactJS, TailwindCSS, and Framer Motion, faithfully implemented from KeySystems figma design. This project showcases modern web development practices with smooth animations, responsive design patterns, and optimized performance. The landing page features interactive elements, scroll-triggered animations, and a mobile-first approach that ensures seamless user experience across all devices. The implementation demonstrates advanced CSS techniques, component architecture, and state management principles.",
+    techStack: ["React.js", "TailwindCSS", "Framer Motion"],
     link: "https://keysystems.netlify.app/",
     github: "https://github.com/Kijeosowo/key-system",
   },
@@ -21,25 +15,26 @@ const projects = [
     id: 2,
     title: "Positivus",
     description:
-      "A digital marketing agency helps businesses grow and succeed online through a range of services including SEO, PPC, social media marketing, and content creation.",
-    techStack: "React.js, Tailwindcss, Framer motion",
+      "A comprehensive digital marketing agency website that helps businesses grow and succeed online through a range of services including SEO, PPC, social media marketing, and content creation. This full-featured website includes service pages, portfolio showcases, client testimonials, and contact forms. Built with modern React patterns, the site features dynamic content loading, interactive service calculators, and integrated analytics. The project demonstrates expertise in creating business-focused web applications with emphasis on conversion optimization and user engagement.",
+    techStack: ["React.js", "TailwindCSS", "Framer Motion"],
     link: "https://positivusco.netlify.app/",
     github: "https://github.com/Kijeosowo/Positivus-Website",
   },
   {
     id: 3,
     title: "Travelsy",
-    description: "A Website built for a travel agency.",
-    techStack: "React.js, Tailwindcss",
+    description:
+      "A comprehensive travel agency website designed to inspire wanderlust and facilitate trip planning. This project features destination galleries, booking interfaces, travel package comparisons, and interactive maps. The website includes advanced filtering systems for destinations, price calculators, and user review sections. Built with responsive design principles, it offers seamless navigation across desktop and mobile devices, incorporating modern UI/UX patterns that enhance the travel planning experience.",
+    techStack: ["React.js", "TailwindCSS"],
     link: "https://travelsyicedt.netlify.app/",
     github: "https://github.com/Kijeosowo/icedt-test",
   },
   {
     id: 4,
-    title: "Unsplash",
+    title: "Unsplash Clone",
     description:
-      "Unsplash is a personal web project designed to replicate the popular image gallery website Unsplash.",
-    techStack: "React.js, Tailwindcss & Unsplash API",
+      "A sophisticated image gallery web application designed to replicate the popular Unsplash platform. This project integrates with the Unsplash API to fetch high-quality images, implements infinite scrolling, advanced search functionality, and image categorization. Features include user collections, download capabilities, photographer profiles, and responsive masonry layouts. The application demonstrates proficiency in API integration, state management, performance optimization, and creating engaging user interfaces for content discovery.",
+    techStack: ["React.js", "TailwindCSS", "Unsplash API"],
     link: "https://kijeunsplash.netlify.app/",
     github: "https://github.com/Kijeosowo/Unsplash",
   },
@@ -47,125 +42,172 @@ const projects = [
     id: 5,
     title: "Apple Galaxy",
     description:
-      "The Apple Galaxy is a combination of the best of both worlds from two industry giants Apple and Samsung.",
-    techStack: "React.js & Tailwindcss",
+      "An innovative concept website that combines the best design elements from Apple and Samsung, creating a unique digital experience. This project features product showcases, interactive comparisons, animated product reveals, and immersive storytelling. The website includes advanced CSS animations, scroll-triggered effects, and responsive design patterns. It demonstrates creative problem-solving in web design, brand fusion concepts, and the ability to create compelling digital narratives that engage users through visual storytelling.",
+    techStack: ["React.js", "TailwindCSS"],
     link: "https://bejewelled-marigold-8aea56.netlify.app/",
     github: "https://github.com/Kijeosowo/Apple-Galaxy",
   },
-
   {
     id: 6,
-    title: "Dara Williams",
-    description: "A Portfolio website for a Product videographer.",
-    techStack: "Html, Tailwindcss & JavaScript",
+    title: "Dara Williams Portfolio",
+    description:
+      "A stunning portfolio website crafted for a professional product videographer, showcasing creative work through immersive visual experiences. The site features video galleries, project case studies, client testimonials, and booking systems. Built with performance optimization in mind, it includes lazy loading for media content, smooth video playback, and responsive design that adapts to various screen sizes. The project demonstrates expertise in multimedia web development and creating platforms that effectively showcase creative work.",
+    techStack: ["HTML", "TailwindCSS", "JavaScript"],
     link: "https://darawiliams.netlify.app/",
     github: "https://github.com/Kijeosowo/KEN-WILLIAMS",
   },
   {
     id: 7,
     title: "Netflix Clone",
-    description: "A replica of the Netflix streaming website.",
-    techStack: "Html, Tailwindcss & JavaScript",
+    description:
+      "A comprehensive replica of the Netflix streaming platform, featuring user authentication, content browsing, search functionality, and responsive design. This project includes movie/TV show catalogs, trailer integration, user profiles, watchlists, and recommendation systems. The application demonstrates advanced frontend development skills including component architecture, state management, API integration, and creating engaging user interfaces for media consumption. Built with modern web technologies and optimized for performance across all devices.",
+    techStack: ["HTML", "TailwindCSS", "JavaScript"],
     link: "https://roaring-pie-2681cc.netlify.app/",
     github: "https://github.com/Kijeosowo/NETFLIX",
   },
   {
     id: 8,
-    title: "Shotr",
+    title: "Shotr - Link Shortener",
     description:
-      "A link shortener web app that helps shorten links professionally.",
-    techStack: "JavaScript & Bitly API",
+      "A professional link shortening web application that helps users create clean, trackable URLs for marketing and sharing purposes. The app integrates with the Bitly API to provide reliable link shortening services, includes analytics tracking, custom alias creation, and bulk URL processing. Features include click tracking, geographic analytics, and QR code generation. This project showcases API integration skills, data visualization, and creating practical tools that solve real-world problems for businesses and individuals.",
+    techStack: ["JavaScript", "Bitly API"],
     link: "https://adorable-marshmallow-d5a5f6.netlify.app/",
     github: "https://github.com/Kijeosowo/Shotr",
   },
   {
     id: 9,
-    title: "Taskify",
-    description: "A Todo App that uses CRUD functionality.",
-    techStack: "React.js & Tailwindcsss",
+    title: "Taskify - Todo Application",
+    description:
+      "A feature-rich todo application that implements full CRUD (Create, Read, Update, Delete) functionality with modern user interface design. The app includes task categorization, priority levels, due date management, progress tracking, and data persistence. Built with React hooks and context API, it demonstrates state management, local storage integration, and creating intuitive user experiences. The application features drag-and-drop functionality, filtering options, and responsive design that works seamlessly across all devices.",
+    techStack: ["React.js", "TailwindCSS"],
     link: "https://super-crisp-62761d.netlify.app/",
     github: "https://github.com/Kijeosowo/Todo-App-Second-semester-Exam",
   },
   {
     id: 10,
-    title: "Trackers",
+    title: "Trackers Shipping",
     description:
-      "A Shipping website that sends products to customers anywhere in the world.",
-    techStack: "HTML & Tailwindcsss",
+      "A comprehensive shipping and logistics website designed for a company that delivers products worldwide. The platform includes package tracking systems, shipping calculators, service area maps, and customer portals. Features include real-time tracking updates, delivery scheduling, cost estimation tools, and customer support integration. The website demonstrates expertise in creating business-focused web applications with emphasis on user experience, data management, and creating trust through professional design and functionality.",
+    techStack: ["HTML", "TailwindCSS"],
     link: "https://timely-jalebi-1414d3.netlify.app/",
     github: "https://github.com/Kijeosowo/Trackers.ng",
   },
 ];
 
-const logo = "<Kijeosowo />";
-
 const Projects = () => {
   return (
-    <section className="bg-[#1A1818] text-[#ECE7E1] min-h-screen">
-      <div className="animate-slideUp h-screen bg-[#ECE7E1] lg:z-[100] relative"></div>
-      <div className="w-20 absolute pt-2 ml-[5%] pt-10 text-[15px] lg:text-[15px] absolute top-10 cursor-pointer hover:scale-110 text-[#1A1818] hover:text-stone-600 transition ease-in duration-300">
-        <Link to="/">
-          <img src={kijeLogo} />
-        </Link>
-      </div>
+    <div className="min-h-screen bg-gradient-to-br from-black via-[#111] to-black text-white">
+      <Logo />
 
-      {/* Scroll Down */}
-      <div className="text-[17px] flex items-center float-right lg:-mt-[25%] md:mt-[-40%] -mt-[80%]">
-        <span className="transform rotate-90 text-stone-600">Scroll Down</span>
-      </div>
-
-      <div className="flex justify-center items-start mt-[-100vh] lg:mt-10">
-        <div className="lg:fixed lg:left-20 lg:bottom-20 lg:flex lg:gap-3 lg:ml-0 md:ml-[-50%] md:mt-[20%] mt-[40%] ml-[-5%] gap-5 flex animate-fade-up animate-once animate-delay-[1000ms]">
-          {/* <img src={image} alt="list" className="lg:w-2 w-1" /> */}
-          <div className="mt-10">
-            <h1 className="text-3xl font-playfair text-[#ECE7E1]">
-              My Projects
+      {/* Main Content */}
+      <main className=" mx-auto px-4 py-12 lg:py-32 lg:pt-56 lg:px-20">
+        <TracingBeam className="px-6">
+          {/* Hero Section */}
+          <div className="mb-16 text-left">
+            <h1 className="lg:text-8xl text-2xl md:text-3xl font-light text-white mb-6">
+              Projects
             </h1>
-            <p className="mt-5 text-stone-500 text-[14px] leading-relaxed">
-              This is a curation of both my personal projects and the ones{" "}
-              <br /> I've worked on with teams of developers.
+            <p className="text-lg text-stone-600 leading-relaxed">
+              A curation of my works across web and mobile development, <br />{" "}
+              showcasing modern design and cutting-edge technologies.
             </p>
-            <div>
-              <div className="mt-5 border border-stone-600 rounded-[5px] pt-2 pb-2 pl-10 pr-10 inline-flex hover:bg-[#ECE7E1] hover:text-[#1A1818] transition ease-in duration-300">
-                <Link to={"/Blogpost"}>Read my Blog Post </Link>
-                <FaBookmark className="mt-1 ml-2" />
-              </div>
-              <div className="mt-[-15%] lg:mt-5 ml-[-55%] lg:ml-0">
-                <Icons />
-              </div>
-            </div>
           </div>
-        </div>
-      </div>
 
-      {/* Project List */}
-      <div className="flex flex-col items-start mt-16 ml-[20%] pb-10 space-y-12 lg:-mt-[45%]">
-        {projects.map((project) => (
-          <div key={project.id} className="max-w-4xl lg:ml-[40%] ml-[-20%]">
-            <Link
-              to={project.link}
-              className="text-[#ECE7E1] lg:text-6xl text-[2rem] text-white hover:text-stone-500 font-playfair transition ease-in duration-300 inline-flex"
-              target="_blank">
-              {project.title}{" "}
-              <FiExternalLink className="text-[20px] ml-2 text-stone-600" />
-            </Link>
-            <p className="text-stone-600 mt-2 text-[14px]">
-              ~ {project.description}
-              <br />
-              <b>Built using {project.techStack}.</b>
-            </p>
-            <div className="mt-4">
-              <Link
-                to={project.github}
-                target="_blank"
-                className="text-[#ECE7E1] text-sm inline-flex border border-stone-600 rounded-[5px] p-3 hover:bg-[#ECE7E1] hover:text-[#1A1818] transition ease-in duration-300">
-                View on Github <FaGithub className="text-sm mt-1 ml-2" />
-              </Link>
+          {/* Projects Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+            {projects.map((project) => (
+              <div
+                key={project.id}
+                className="group border border-[#1A1A1A] rounded-lg hover:bg-gradient-to-br hover:from-[#111] hover:via-[#111] hover:to-[#111] hover:transition-all hover:duration-500 transition-all duration-800 hover:-translate-y-3 hover:shadow-2xl hover:shadow-black/50 overflow-hidden">
+                <div className="p-6">
+                  <h3 className="text-white text-3xl font-light mb-3 group-hover:text-gray-300 transition-colors">
+                    {project.title}
+                  </h3>
+                  <p className="text-stone-600 text-justify text-sm leading-relaxed mb-4">
+                    {project.description}
+                  </p>
+
+                  {/* Tech Stack */}
+                  <div className="flex flex-wrap gap-2 mb-6">
+                    {project.techStack.map((tech, index) => (
+                      <span
+                        key={index}
+                        className="px-4 py-2 bg-stone-900 text-stone-500 text-xs rounded-md hover:bg-black/20 transition-colors">
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+
+                  {/* Footer */}
+                  <div className="flex justify-between items-center">
+                    <div className="flex space-x-2">
+                      <a
+                        href={project.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center justify-center w-8 h-8 text-gray-300 hover:bg-stone-800 rounded transition-colors"
+                        title="Github">
+                        <svg
+                          className="h-5 w-5"
+                          fill="currentColor"
+                          viewBox="0 0 24 24">
+                          <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                        </svg>
+                      </a>
+                      <a
+                        href={project.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center justify-center w-8 h-8 text-gray-300 hover:bg-stone-800 rounded transition-colors"
+                        title="View website">
+                        <svg
+                          className="h-5 w-5"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24">
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                          />
+                        </svg>
+                      </a>
+                    </div>
+                    <a
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="px-4 py-2 bg-stone-900 text-stone-500 hover:bg-stone-800 text-white text-sm rounded transition-colors">
+                      View Details
+                    </a>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Footer CTA */}
+          <div className="mt-20 text-center">
+            <div className="inline-flex items-center space-x-4 p-6 bg-transparent rounded-lg border border-stone-800">
+              <div className="text-gray-300">
+                <p className="text-4xl font-light">
+                  Interested in working together?
+                </p>
+                <p className="text-lg mt-3 text-stone-600">
+                  Let's create something amazing
+                </p>
+              </div>
+              <a
+                href="/contact"
+                className="px-6 py-2 bg-stone-900 hover:bg-stone-800 text-white rounded transition-colors">
+                Get In Touch
+              </a>
             </div>
           </div>
-        ))}
-      </div>
-    </section>
+        </TracingBeam>
+      </main>
+    </div>
   );
 };
 

@@ -13,7 +13,7 @@ const ToggleTextComponent = () => {
   ];
 
   return (
-    <div className="bg-[#D6CDC2] rounded mt-3 text-sm md:text-base lg:text-md leading-6 lg:leading-[25px] text-stone-800 animate-fade-up animate-once animate-delay-[1000ms]">
+    <div className="bg-[#000000] rounded mt-3 lg:text-[1.2rem] md:text-base lg:text-md leading-6 lg:leading-[25px] text-stone-600 animate-fade-up animate-once animate-delay-[1000ms]">
       <p className="p-5">
         {items.slice(0, showAll ? items.length : 3).map((item, index) => (
           <p key={index}>{item}</p>

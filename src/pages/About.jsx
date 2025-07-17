@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
-import image from "../Image/profilenew.jpg";
-import Icons from "../components/Icons";
+import image from "../Image/profilepic.jpg";
 import Logo from "../components/Logo";
 import { Link } from "react-router";
 import Download from "../components/Download";
-import ToggleTextComponent from "../components/ToggleTextComponent";
+import { CiLocationOn } from "react-icons/ci";
+// import ToggleTextComponent from "../components/ToggleTextComponent";
 
 const About = () => {
   const [showContent, setShowContent] = useState(false);
@@ -18,9 +18,9 @@ const About = () => {
   }, []);
 
   return (
-    <section className="bg-[#ECE7E1] text-[#1A1818] pb-20">
+    <section className="bg-gradient-to-br from-black via-[#111] to-black text-stone-400 pb-20">
       {/* Slide-Up Animation */}
-      <div className="animate-slideUp h-[100vh] bg-[#1A1818]"></div>
+      <div className="animate-slideUp h-[100vh] g-gradient-to-br from-black via-[#111] to-black z-50" />
 
       {showContent && (
         <>
@@ -30,16 +30,16 @@ const About = () => {
 
           {/* Header */}
           <header className="px-6 lg:px-24 lg:mt-[-80vh] mt-[-90vh]">
-            <h1 className="text-[5rem] md:text-8xl mt-10 md:mt-20 lg:mt-0 lg:text-[12rem] font-playfair animate-fade-up animate-once">
+            <h1 className="text-[5rem] text-white font-light md:text-8xl mt-10 md:mt-20 lg:mt-0 lg:text-8xl animate-fade-up animate-once">
               About
             </h1>
           </header>
 
           {/* Content Section */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 px-6 lg:px-24 mt-5">
-            <aside>
+            <aside className="lg:py-20">
               <div className="flex flex-col gap-6 text-sm md:text-base lg:text-md leading-6 lg:leading-[25px] text-stone-800 animate-fade-up animate-once animate-delay-[500ms]">
-                <p>
+                <p className="text-justify text-stone-600 lg:text-[1.2rem]">
                   As a passionate Frontend Web Developer with 3 years of
                   experience, I specialize in transforming complex ideas into
                   seamless, user-centric web experiences. My expertise spans
@@ -76,29 +76,48 @@ const About = () => {
             <aside className="flex justify-center animate-fade-up animate-once animate-delay-[1000ms]">
               <img
                 src={image}
-                className="w-full max-w-md md:max-w-lg lg:max-w-[25vw] lg:max-h-[70vh] h-auto rounded-lg"
+                className="lg:w-full lg:max-w-md h-auto rounded-lg"
                 alt="Profile"
               />
             </aside>
           </div>
 
-          <div className="mt-10 lg:ml-20 lg:mr-20 ml-10 mr-10">
-            <p className="text-[1.2rem] font-bold">
-              TAOLTECH (Remote) —— Aug 2023 - December 2024{" "}
-            </p>
-            <p className="text-stone-800">Frontend Developer</p>
-            <div>
-              <ToggleTextComponent />
+          <div className="mt-10">
+            <h1 className="text-white mx-5 lg:ml-20 text-5xl pt-5 font-light">
+              Work History
+            </h1>
+            <div className="lg:my-20 my-10 lg:mx-20 mx-5 border-t border-stone-700 py-5">
+              <p className="text-stone-500 font-light py-3">
+                Frontend Developer Intern
+              </p>
+              <Link
+                className="lg:text-5xl text-4xl font-[300] flex lg:flex-row lg:gap-0 flex-col hover:text-stone-500 transition-ease duration-300"
+                title="View Details">
+                WebInfluencers (Remote) -{" "}
+                <p className="flex">
+                  <CiLocationOn className="lg:flex hidden" /> United Arab
+                  Emirates ( Dubai )
+                </p>
+              </Link>
+            </div>
+
+            <div className="lg:my-10 my-10 lg:mx-20 mx-5 border-t border-stone-700 py-5">
+              <p className="text-stone-500 font-light py-3">
+                Frontend Developer
+              </p>
+              <Link
+                className="lg:text-5xl text-4xl font-[300] flex lg:flex-row flex-col hover:text-stone-500 transition-ease duration-300"
+                title="View Details">
+                Taoltech (Remote) -{" "}
+                <p className="flex">
+                  <CiLocationOn className="lg:flex hidden" /> Lagos, Nigeria
+                </p>
+              </Link>
             </div>
           </div>
 
           <div>
             <Download />
-          </div>
-
-          {/* Icons Section */}
-          <div className="mt-10 lg:ml-[5%] ml-[-55%]">
-            <Icons />
           </div>
         </>
       )}
