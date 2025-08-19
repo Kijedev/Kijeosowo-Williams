@@ -1,4 +1,3 @@
-import Logo from "../components/Logo";
 import { TracingBeam } from "../components/ui/tracing-beam";
 
 const projects = [
@@ -97,14 +96,13 @@ const projects = [
 const Projects = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-black via-[#111] to-black text-white">
-      <Logo />
-
+  
       {/* Main Content */}
       <main className=" mx-auto px-4 py-12 lg:py-32 lg:pt-56 lg:px-20">
         <TracingBeam className="px-6">
           {/* Hero Section */}
           <div className="mb-16 text-left">
-            <h1 className="lg:text-8xl text-2xl md:text-3xl font-light text-white mb-6">
+            <h1 className="lg:text-5xl text-2xl md:text-3xl font-light text-white mb-6">
               Projects
             </h1>
             <p className="text-lg text-stone-600 leading-relaxed">
@@ -185,25 +183,6 @@ const Projects = () => {
                 </div>
               </div>
             ))}
-          </div>
-
-          {/* Footer CTA */}
-          <div className="mt-20 text-center">
-            <div className="inline-flex items-center space-x-4 p-6 bg-transparent rounded-lg border border-stone-800">
-              <div className="text-gray-300">
-                <p className="text-4xl font-light">
-                  Interested in working together?
-                </p>
-                <p className="text-lg mt-3 text-stone-600">
-                  Let's create something amazing
-                </p>
-              </div>
-              <a
-                href="/contact"
-                className="px-6 py-2 bg-stone-900 hover:bg-stone-800 text-white rounded transition-colors">
-                Get In Touch
-              </a>
-            </div>
           </div>
         </TracingBeam>
       </main>

@@ -6,6 +6,10 @@ import Icons from "./Icons";
 import Logo from "../components/Logo";
 import Marquee from "../components/Marquee";
 import { ArrowRight } from "lucide-react";
+import Projects from "../pages/Projects";
+import { FaChevronDown } from "react-icons/fa";
+import { FiMenu, FiX } from "react-icons/fi"; // 👈 icons for hamburger open/close
+import Blogpost from "../pages/Blogpost";
 
 const Preloader = () => {
   const [progress, setProgress] = useState(0);
@@ -45,13 +49,13 @@ const Homepage = () => {
     location.pathname === "/" && !sessionStorage.getItem("visited")
   );
   const [showContent, setShowContent] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false); // 👈 menu toggle
 
   useEffect(() => {
     if (loading) {
       const timer = setTimeout(() => {
         setLoading(false);
         sessionStorage.setItem("visited", "true");
-        // Small delay to ensure smooth transition
         setTimeout(() => setShowContent(true), 100);
       }, 3000);
       return () => clearTimeout(timer);
@@ -63,75 +67,101 @@ const Homepage = () => {
   if (loading) return <Preloader />;
   if (location.pathname !== "/") return null;
 
+  const navItems = [
+    { name: "About", path: "/about" },
+    { name: "Articles", path: "/blogpost" },
+    { name: "Projects", path: "/projects" },
+    { name: "Contact", path: "/contact" },
+    // { name: "iFashion", path: "/fashion" },
+    { name: "Certification", path: "/certification" },
+  ];
+
   return (
     <section className="bg-gradient-to-br from-black via-[#111] to-black min-h-screen overflow-hidden">
-      {/* Main content with slide-in animation */}
       <div
         className={`relative z-20 transition-all duration-300 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] ${
           showContent
             ? "translate-x-0 opacity-100"
             : "translate-x-full opacity-0"
-        }`}>
-        <Logo />
+        }`}
+      >
+        {/* ✅ Navbar */}
+        <div className="flex justify-between items-center px-6 py-6 backdrop-blur-lg fixed top-0 left-0 right-0 z-50">
+          <Logo />
 
-        {/* Hero and Navigation Grid */}
-        <div className="flex flex-col lg:flex-row lg:justify-between lg:px-32 lg:items-center lg:h-[100vh] px-6 pt-20 pt-32">
-          {/* <img src={Certificatebg} alt="Certificatebg" /> */}
-          {/* Hero Section */}
-          <div className="space-y-6 text-left relative">
-            <h1 className="text-stone-600 text-xl flex gap-2">
-              Hey there! <p className="text-3xl animate-wiggle -mt-2">👋</p>
-            </h1>
-            <h2 className="text-4xl lg:text-6xl font-light text-white">
-              I'm Kije Williams
-            </h2>
-            <p className="text-base lg:text-xl lg:leading-8 text-stone-600">
-              A Certified <strong>Altschool Africa</strong> Frontend Developer
-              <br />
-              dedicated to creating visually stunning and user-
-              <br />
-              friendly web and mobile applications.
-            </p>
-            <Link
-              to="/projects"
-              className="inline-flex items-center flex gap-2 px-10 py-3 bg-white text-black rounded hover:bg-[#ECE7E1] transition-colors duration-300 group">
-              View Projects
-              <ArrowRight className="w-3 h-3 group-hover:animate-bounce" />
-            </Link>
-            <Icons />
-          </div>
-
-          {/* Navigation Links */}
-          <nav className="text-left lg:-mt-10 mt-10">
-            <ul className="text-white/50 text-6xl lg:text-[5rem] lg:leading-[4rem] font-light space-y-6">
-              {[
-                { name: "About", path: "/about" },
-                { name: "Articles", path: "/blogpost" },
-                { name: "Projects", path: "/projects" },
-
-                { name: "Contact", path: "/contact" },
-                { name: "iFashion", path: "/fashion" },
-                {
-                  name: "Certification",
-                  path: "/certification",
-                  icon: "🌟",
-                },
-              ].map((item) => (
+          {/* Desktop Menu */}
+          <nav className="hidden md:block">
+            <ul className="text-white/50 text-[1rem] flex gap-5 font-light">
+              {navItems.map((item) => (
                 <li key={item.name}>
                   <Link
                     to={item.path}
-                    className="hover:text-stone-600 transition-colors duration-500 flex">
+                    className="hover:text-stone-400 text-white transition-colors duration-500"
+                  >
                     {item.name}
-                    <p className="text-2xl animate-pulse">{item.icon}</p>
                   </Link>
                 </li>
               ))}
             </ul>
           </nav>
+
+          {/* Mobile Menu Button */}
+          <button
+            className="md:hidden text-white text-3xl"
+            onClick={() => setMenuOpen(!menuOpen)}
+          >
+            {menuOpen ? <FiX /> : <FiMenu />}
+          </button>
+
+          {/* Mobile Dropdown */}
+          {menuOpen && (
+            <div className="absolute top-16 right-6 bg-black/90 backdrop-blur-lg rounded-lg shadow-lg p-6 md:hidden">
+              <ul className="flex flex-col gap-4 text-white text-lg">
+                {navItems.map((item) => (
+                  <li key={item.name}>
+                    <Link
+                      to={item.path}
+                      className="hover:text-stone-400 transition-colors duration-500"
+                      onClick={() => setMenuOpen(false)}
+                    >
+                      {item.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
         </div>
 
-        {/* Marquee */}
-        <Marquee />
+        {/* ✅ Hero Section */}
+        <div className="flex flex-col justify-center items-center text-center min-h-screen px-6 space-y-6">
+          <h1 className="text-stone-600 text-xl flex gap-2 justify-center items-center">
+            Hey there! <p className="text-3xl animate-wiggle -mt-2">👋</p>
+          </h1>
+          <h2 className="text-4xl lg:text-6xl font-light text-white">
+            I'm Kije Williams
+          </h2>
+          <p className="text-base lg:text-xl lg:leading-8 text-stone-600">
+            A Certified <strong>Altschool Africa</strong> Frontend Developer
+            <br />
+            dedicated to creating visually stunning and user-
+            <br />
+            friendly web and mobile applications.
+          </p>
+          <Link
+            to="/projects"
+            className="inline-flex items-center flex gap-2 px-10 py-3 bg-white text-black rounded hover:bg-[#ECE7E1] transition-colors duration-300 group"
+          >
+            View Projects
+            <ArrowRight className="w-3 h-3 group-hover:animate-bounce" />
+          </Link>
+          <Icons />
+        </div>
+
+        {/* Projects */}
+        <Projects />
+
+        <Blogpost />
 
         {/* Footer CTA */}
         <div className="text-center bg-black py-20">
@@ -146,7 +176,8 @@ const Homepage = () => {
             </div>
             <Link
               to="/contact"
-              className="px-8 py-3 bg-white flex gap-2 hover:bg-[#ECE7E1] text-black rounded transition-colors duration-300 group">
+              className="px-8 py-3 bg-white flex gap-2 hover:bg-[#ECE7E1] text-black rounded transition-colors duration-300 group"
+            >
               Let's Work Together{" "}
               <ArrowRight className="h-3 w-3 group-hover:animate-bounce mt-2" />
             </Link>

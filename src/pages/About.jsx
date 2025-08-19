@@ -24,9 +24,9 @@ const About = () => {
 
       {showContent && (
         <>
-          <div>
+          {/* <div>
             <Logo />
-          </div>
+          </div> */}
 
           {/* Header */}
           <header className="px-6 lg:px-24 lg:mt-[-80vh] mt-[-90vh]">
