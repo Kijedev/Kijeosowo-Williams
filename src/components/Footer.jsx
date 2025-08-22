@@ -83,11 +83,8 @@ const Footer = () => {
               <a href="#">Contact</a>
             </li>
             <li className="hover:text-stone-500 duration-300 transition-ease">
-              <a href="#">iFashion</a>
-            </li>
-            <li className="hover:text-stone-500 duration-300 transition-ease">
               <a href="#" className="flex">
-                Certification <p className="text-sm">🌟</p>
+                Certification
               </a>
             </li>
           </ul>

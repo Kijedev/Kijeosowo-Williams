@@ -98,8 +98,8 @@ const Projects = () => {
     <div className="min-h-screen bg-gradient-to-br from-black via-[#111] to-black text-white">
   
       {/* Main Content */}
-      <main className=" mx-auto px-4 py-12 lg:py-32 lg:pt-56 lg:px-20">
-        <TracingBeam className="px-6">
+      <main className=" mx-auto px-4 py-12 lg:py-32 lg:pt-10 lg:px-20">
+        <div className="px-6">
           {/* Hero Section */}
           <div className="mb-16 text-left">
             <h1 className="lg:text-5xl text-2xl md:text-3xl font-light text-white mb-6">
@@ -116,7 +116,7 @@ const Projects = () => {
             {projects.map((project) => (
               <div
                 key={project.id}
-                className="group border border-[#1A1A1A] rounded-lg hover:bg-gradient-to-br hover:from-[#111] hover:via-[#111] hover:to-[#111] hover:transition-all hover:duration-500 transition-all duration-800 hover:-translate-y-3 hover:shadow-2xl hover:shadow-black/50 overflow-hidden">
+                className="group border border-[#1A1A1A] cursor-pointer rounded-lg hover:bg-gradient-to-br hover:from-[#111] hover:via-[#111] hover:to-[#111] hover:transition-all hover:duration-500 transition-all duration-800 hover:-translate-y-3 hover:shadow-2xl hover:shadow-black/50 overflow-hidden">
                 <div className="p-6">
                   <h3 className="text-white text-3xl font-light mb-3 group-hover:text-gray-300 transition-colors">
                     {project.title}
@@ -184,7 +184,7 @@ const Projects = () => {
               </div>
             ))}
           </div>
-        </TracingBeam>
+        </div>
       </main>
     </div>
   );

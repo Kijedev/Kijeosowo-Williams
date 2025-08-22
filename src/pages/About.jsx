@@ -24,12 +24,8 @@ const About = () => {
 
       {showContent && (
         <>
-          {/* <div>
-            <Logo />
-          </div> */}
-
           {/* Header */}
-          <header className="px-6 lg:px-24 lg:mt-[-80vh] mt-[-90vh]">
+          <header className="px-6 lg:px-24 lg:mt-[-90vh] mt-[-90vh]">
             <h1 className="text-[5rem] text-white font-light md:text-8xl mt-10 md:mt-20 lg:mt-0 lg:text-8xl animate-fade-up animate-once">
               About
             </h1>
@@ -86,17 +82,16 @@ const About = () => {
             <h1 className="text-white mx-5 lg:ml-20 text-5xl pt-5 font-light">
               Work History
             </h1>
-            <div className="lg:my-20 my-10 lg:mx-20 mx-5 border-t border-stone-700 py-5">
+            <div className="lg:my-10 my-10 lg:mx-20 mx-5 border-t border-stone-700 py-5">
               <p className="text-stone-500 font-light py-3">
                 Frontend Developer Intern
               </p>
               <Link
-                className="lg:text-5xl text-4xl font-[300] flex lg:flex-row lg:gap-0 flex-col hover:text-stone-500 transition-ease duration-300"
+                className="lg:text-5xl text-2xl font-[300] flex lg:flex-row lg:gap-0 flex-col hover:text-stone-500 transition-ease duration-300"
                 title="View Details">
                 WebInfluencers (Remote) -{" "}
                 <p className="flex">
-                  <CiLocationOn className="lg:flex hidden" /> United Arab
-                  Emirates ( Dubai )
+                  <CiLocationOn className="lg:flex hidden" /> UAE ( Dubai )
                 </p>
               </Link>
             </div>
@@ -106,7 +101,7 @@ const About = () => {
                 Frontend Developer
               </p>
               <Link
-                className="lg:text-5xl text-4xl font-[300] flex lg:flex-row flex-col hover:text-stone-500 transition-ease duration-300"
+                className="lg:text-5xl text-2xl font-[300] flex lg:flex-row flex-col hover:text-stone-500 transition-ease duration-300"
                 title="View Details">
                 Taoltech (Remote) -{" "}
                 <p className="flex">

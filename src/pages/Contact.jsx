@@ -8,7 +8,7 @@ const Contact = () => {
   return (
     <section className="bg-gradient-to-br from-black via-[#111] to-black text-[#ECE7E1]">
       {/* Animation */}
-      <div className="animate-slideUp lg:h-[100vh] h-[100vh] bg-stone-900 relative z-100"></div>
+      <div className="animate-slideUp lg:h-[100vh] h-[100vh] bg-gradient-to-br from-black via-[#111] to-black relative z-100"></div>
       <div className="w-[10%] lg:w-[4%] pt-2 ml-[5%] pt-10 text-[15px] lg:text-[15px] absolute top-10 cursor-pointer hover:scale-110 text-[#1A1818] hover:text-stone-600 transition ease-in duration-300">
         <Link to="/">
           <img src={kijeLogo} />

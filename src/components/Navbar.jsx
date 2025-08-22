@@ -10,6 +10,7 @@ import Projects from "../pages/Projects";
 import { FaChevronDown } from "react-icons/fa";
 import { FiMenu, FiX } from "react-icons/fi"; // 👈 icons for hamburger open/close
 import Blogpost from "../pages/Blogpost";
+import Footer from "./Footer";
 
 const Preloader = () => {
   const [progress, setProgress] = useState(0);
@@ -133,7 +134,7 @@ const Homepage = () => {
           )}
         </div>
 
-        {/* ✅ Hero Section */}
+        {/* Hero Section */}
         <div className="flex flex-col justify-center items-center text-center min-h-screen px-6 space-y-6">
           <h1 className="text-stone-600 text-xl flex gap-2 justify-center items-center">
             Hey there! <p className="text-3xl animate-wiggle -mt-2">👋</p>
@@ -161,6 +162,7 @@ const Homepage = () => {
         {/* Projects */}
         <Projects />
 
+        {/* Blog */}
         <Blogpost />
 
         {/* Footer CTA */}
@@ -184,6 +186,8 @@ const Homepage = () => {
           </div>
         </div>
       </div>
+
+      <Footer />
     </section>
   );
 };

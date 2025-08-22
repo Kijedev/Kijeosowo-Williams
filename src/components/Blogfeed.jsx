@@ -102,23 +102,20 @@ export default function Component() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-black via-[#111] to-black">
+    <div className="min-h-screen bg-gradient-to-br from-[#111] via-black to-black">
       {/* Header Section */}
       <div className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-black via-[#111111] to-black"></div>
         <div className="relative px-6 py-16 sm:py-24 lg:px-8">
-          {/* logo */}
-          <Logo />
-          <div className="mx-auto max-w-4xl text-center mt-20 lg:mt-0">
-            <h1 className="text-4xl font-light tracking-tight text-white sm:text-6xl lg:text-8xl">
-              React Native Journey
+          <div className="mt-20 lg:mt-0 px-20">
+            <h1 className="text-4xl font-light tracking-tight text-white sm:text-6xl lg:text-5xl">
+              Articles
             </h1>
-            <p className="mt-6 text-lg leading-8 text-stone-600 max-w-2xl mx-auto">
-              I'm currently running a series where I document my journey of
-              learning React Native. I share weekly updates on Medium &
+            <p className="mt-3 text-lg leading-8 text-stone-600">
+              I'm running a series where I document my journey of
+              learning React Native. <br /> I share weekly updates on Medium &
               LinkedIn. Check it out!
             </p>
-            <div className="mt-8 flex items-center justify-center gap-2 text-sm text-stone-600">
+            <div className="mt-8 flex items-center gap-2 text-sm text-stone-600">
               <Calendar className="h-4 w-4" />
               <span>Weekly Updates • React Native with Expo</span>
             </div>
@@ -127,7 +124,7 @@ export default function Component() {
       </div>
 
       {/* Blog Posts Grid */}
-      <div className="bg-black overflow-hidden px-5 md:px-0 lg:px-0 xl:px-0">
+      <div className="bg-gradient-to-br from-[#111] via-black to-black overflow-hidden px-5 md:px-0 lg:px-0 xl:px-0">
         <div className="mx-auto max-w-7xl">
           <div className="grid gap-20 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2">
             {blogPosts.map((post, index) => (

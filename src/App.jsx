@@ -21,7 +21,6 @@ function App() {
         <Route path="/certification" element={<Certification />} />
         {/* <Route path="/fashion" element={< Fashion />} /> */}
       </Routes>
-      <Footer />
     </>
   );
 }
