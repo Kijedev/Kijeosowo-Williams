@@ -101,7 +101,7 @@ const Projects = () => {
       <main className=" mx-auto px-4 py-12 lg:py-32 lg:pt-10 lg:px-20">
         <div className="px-6">
           {/* Hero Section */}
-          <div className="mb-16 text-left">
+          <div className="mb-16 text-center">
             <h1 className="lg:text-5xl text-2xl md:text-3xl font-light text-white mb-6">
               Projects
             </h1>
@@ -176,8 +176,8 @@ const Projects = () => {
                       href={project.link}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="px-4 py-2 bg-stone-900 text-stone-500 hover:bg-stone-800 text-white text-sm rounded transition-colors">
-                      View Details
+                      className="px-4 py-2 bg-stone-900 text-stone-400 hover:bg-stone-800 text-sm rounded transition-colors">
+                      View Website
                     </a>
                   </div>
                 </div>

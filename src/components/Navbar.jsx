@@ -7,10 +7,14 @@ import Logo from "../components/Logo";
 import Marquee from "../components/Marquee";
 import { ArrowRight } from "lucide-react";
 import Projects from "../pages/Projects";
-import { FaChevronDown } from "react-icons/fa";
-import { FiMenu, FiX } from "react-icons/fi"; // 👈 icons for hamburger open/close
+import { FiMenu, FiX } from "react-icons/fi";
 import Blogpost from "../pages/Blogpost";
 import Footer from "./Footer";
+import { CiUser } from "react-icons/ci";
+import { IoBookOutline } from "react-icons/io5";
+import { LuCodeXml } from "react-icons/lu";
+import { RiContactsBook3Line } from "react-icons/ri";
+import { LiaCertificateSolid } from "react-icons/lia";
 
 const Preloader = () => {
   const [progress, setProgress] = useState(0);
@@ -69,12 +73,11 @@ const Homepage = () => {
   if (location.pathname !== "/") return null;
 
   const navItems = [
-    { name: "About", path: "/about" },
-    { name: "Articles", path: "/blogpost" },
-    { name: "Projects", path: "/projects" },
-    { name: "Contact", path: "/contact" },
-    // { name: "iFashion", path: "/fashion" },
-    { name: "Certification", path: "/certification" },
+    { name: "About", path: "/about", icon: <CiUser /> },
+    { name: "Articles", path: "/blogpost", icon: <IoBookOutline /> },
+    { name: "Projects", path: "/projects", icon: <LuCodeXml /> },
+    { name: "Contact", path: "/contact", icon: <RiContactsBook3Line /> },
+    { name: "Certification", path: "/certification", icon: <LiaCertificateSolid /> },
   ];
 
   return (
@@ -87,14 +90,15 @@ const Homepage = () => {
         }`}
       >
         {/* ✅ Navbar */}
-        <div className="flex justify-between items-center px-6 py-6 backdrop-blur-lg fixed top-0 left-0 right-0 z-50">
+        <div className="flex justify-between lg:px-28 items-center px-6 py-6 backdrop-blur-lg fixed top-0 left-0 right-0 z-50">
           <Logo />
 
           {/* Desktop Menu */}
           <nav className="hidden md:block">
             <ul className="text-white/50 text-[1rem] flex gap-5 font-light">
               {navItems.map((item) => (
-                <li key={item.name}>
+                <li key={item.name} className="flex items-center gap-2 hover:text-stone-400 transition-colors duration-500">
+                  <p>{item.icon}</p>
                   <Link
                     to={item.path}
                     className="hover:text-stone-400 text-white transition-colors duration-500"
@@ -119,7 +123,8 @@ const Homepage = () => {
             <div className="absolute top-16 right-6 bg-black/90 backdrop-blur-lg rounded-lg shadow-lg p-6 md:hidden">
               <ul className="flex flex-col gap-4 text-white text-lg">
                 {navItems.map((item) => (
-                  <li key={item.name}>
+                  <li key={item.name} className="flex items-center gap-2 hover:text-stone-400 transition-colors duration-500">
+                    <p>{item.icon}</p>
                     <Link
                       to={item.path}
                       className="hover:text-stone-400 transition-colors duration-500"
@@ -136,10 +141,11 @@ const Homepage = () => {
 
         {/* Hero Section */}
         <div className="flex flex-col justify-center items-center text-center min-h-screen px-6 space-y-6">
-          <h1 className="text-stone-600 text-xl flex gap-2 justify-center items-center">
-            Hey there! <p className="text-3xl animate-wiggle -mt-2">👋</p>
+          <h1 className="text-stone-400 font-semibold lg:text-[12rem] text-xl flex gap-2 justify-center items-center">
+            Hello there! <p className="text- animate-wiggle -mt-2">👋</p>
           </h1>
-          <h2 className="text-4xl lg:text-6xl font-light text-white">
+          <div className="flex flex-col gap-5">
+            <h2 className="text-4xl lg:text-6xl lg:mt-20 font-light text-white">
             I'm Kije Williams
           </h2>
           <p className="text-base lg:text-xl lg:leading-8 text-stone-600">
@@ -149,14 +155,19 @@ const Homepage = () => {
             <br />
             friendly web and mobile applications.
           </p>
-          <Link
+          <div>
+            <Link
             to="/projects"
             className="inline-flex items-center flex gap-2 px-10 py-3 bg-white text-black rounded hover:bg-[#ECE7E1] transition-colors duration-300 group"
           >
             View Projects
             <ArrowRight className="w-3 h-3 group-hover:animate-bounce" />
           </Link>
-          <Icons />
+          </div>
+          <div>
+            <Icons />
+          </div>
+          </div>
         </div>
 
         {/* Projects */}
@@ -166,7 +177,7 @@ const Homepage = () => {
         <Blogpost />
 
         {/* Footer CTA */}
-        <div className="text-center bg-black py-20">
+        <div className="text-center bg-black py-20 px-10 lg:px-0">
           <div className="inline-flex flex-col items-center gap-6 px-16 py-16 rounded-3xl border-2 border-white/20">
             <div className="text-gray-300 space-y-4">
               <h3 className="text-3xl lg:text-5xl font-light">

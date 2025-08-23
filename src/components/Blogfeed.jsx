@@ -105,8 +105,8 @@ export default function Component() {
     <div className="min-h-screen bg-gradient-to-br from-[#111] via-black to-black">
       {/* Header Section */}
       <div className="relative overflow-hidden">
-        <div className="relative px-6 py-16 sm:py-24 lg:px-8">
-          <div className="mt-20 lg:mt-0 px-20">
+        <div className="relative py-16 sm:py-24 lg:px-8">
+          <div className="mt-20 lg:mt-0 px-20 text-center">
             <h1 className="text-4xl font-light tracking-tight text-white sm:text-6xl lg:text-5xl">
               Articles
             </h1>
@@ -115,7 +115,7 @@ export default function Component() {
               learning React Native. <br /> I share weekly updates on Medium &
               LinkedIn. Check it out!
             </p>
-            <div className="mt-8 flex items-center gap-2 text-sm text-stone-600">
+            <div className="mt-8 flex items-center gap-2 text-sm text-stone-600 text-center justify-center">
               <Calendar className="h-4 w-4" />
               <span>Weekly Updates • React Native with Expo</span>
             </div>

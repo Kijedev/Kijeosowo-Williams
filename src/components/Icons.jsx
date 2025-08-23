@@ -8,7 +8,7 @@ import { Link } from "react-router";
 
 const Icons = () => {
   return (
-    <div className="flex gap-3 text-[1.2rem] lg:justify-start justify-left mt-20 lg:mt-0 text-white">
+    <div className="flex gap-3 text-[1.2rem] lg:justify-center justify-center mt-20 lg:mt-0 text-white">
       <Link
         to="https://www.linkedin.com/in/williams-kijeosowo-237749224/"
         className="hover:text-stone-600 transition-colors duration-500"
