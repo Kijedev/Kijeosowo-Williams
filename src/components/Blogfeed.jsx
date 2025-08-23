@@ -1,4 +1,4 @@
-import { ExternalLink, Calendar, ArrowRight, ChevronRight } from "lucide-react";
+import { Calendar, ArrowRight } from "lucide-react";
 import Week1 from "../Image/Week_1new.png";
 import Week2 from "../Image/Week_2new.png";
 import Week3 from "../Image/Week_3new.png";
@@ -111,9 +111,9 @@ export default function Component() {
               Articles
             </h1>
             <p className="mt-3 text-lg leading-8 text-stone-600">
-              I'm running a series where I document my journey of
-              learning React Native. <br /> I share weekly updates on Medium &
-              LinkedIn. Check it out!
+              I'm running a series where I document my journey of learning React
+              Native. <br /> I share weekly updates on Medium & LinkedIn. Check
+              it out!
             </p>
             <div className="mt-8 flex items-center gap-2 text-sm text-stone-600 text-center justify-center">
               <Calendar className="h-4 w-4" />
@@ -130,7 +130,8 @@ export default function Component() {
             {blogPosts.map((post, index) => (
               <article
                 key={index}
-                className="lg:h-[500px] lg:w-[650px] relative bg-black backdrop-blur-sm lg:rounded-[30px] rounded-[10px] overflow-hidden border border-stone-800 hover:border-stone-700 transition-all duration-300 hover:shadow-md hover:shadow-[#333] cursor-pointer">
+                className="lg:h-[500px] lg:w-[650px] relative bg-black backdrop-blur-sm lg:rounded-[30px] rounded-[10px] overflow-hidden border border-stone-800 hover:border-stone-700 transition-all duration-300 hover:shadow-md hover:shadow-[#333] cursor-pointer"
+              >
                 {/* Image */}
                 <div className="relative overflow-hidden lg:pt-[60px]">
                   <img
@@ -151,7 +152,8 @@ export default function Component() {
                       display: "-webkit-box",
                       WebkitLineClamp: 3,
                       WebkitBoxOrient: "vertical",
-                    }}>
+                    }}
+                  >
                     {post.description}
                   </p>
 
@@ -161,7 +163,8 @@ export default function Component() {
                       href={post.medium}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center justify-center gap-2 lg:px-0 py-2.5 text-white lg:text-lg text-sm font-light group">
+                      className="flex items-center justify-center gap-2 lg:px-0 py-2.5 text-white lg:text-lg text-sm font-light group"
+                    >
                       <span>Read on Medium</span>
                       <ArrowRight className="h-3 w-3 group-hover:animate-bounce" />
                     </a>
@@ -172,7 +175,8 @@ export default function Component() {
                       href={post.linkedIn}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center justify-center gap-2 lg:px-0 py-2.5 text-white text-lg font-light group">
+                      className="flex items-center justify-center gap-2 lg:px-0 py-2.5 text-white text-lg font-light group"
+                    >
                       <span>Read on LinkedIn</span>
                       <ArrowRight className="h-3 w-3 group-hover:animate-bounce" />
                     </a>
@@ -200,7 +204,8 @@ export default function Component() {
                 href="https://medium.com/@kijewilliams01"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 lg:px-6 lg:py-4 px-3 py-3 bg-white hover:bg-[#ECE7E1] text-black rounded-lg transition-colors duration-200 text-sm">
+                className="inline-flex items-center gap-2 lg:px-6 lg:py-4 px-3 py-3 bg-white hover:bg-[#ECE7E1] text-black rounded-lg transition-colors duration-200 text-sm"
+              >
                 <span>Follow on Medium</span>
                 <ArrowRight className="h-4 w-4" />
               </a>
@@ -208,7 +213,8 @@ export default function Component() {
                 href="https://www.linkedin.com/in/williams-kijeosowo-237749224"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 lg:px-6 lg:py-4 px-3 py-3 bg-white hover:bg-[#ECE7E1] text-black rounded-lg transition-colors duration-200 text-sm">
+                className="inline-flex items-center gap-2 lg:px-6 lg:py-4 px-3 py-3 bg-white hover:bg-[#ECE7E1] text-black rounded-lg transition-colors duration-200 text-sm"
+              >
                 <span>Connect on LinkedIn</span>
                 <ArrowRight className="h-4 w-4" />
               </a>

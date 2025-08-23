@@ -1,5 +1,4 @@
-import { TracingBeam } from "../components/ui/tracing-beam";
-
+import React from "react";
 const projects = [
   {
     id: 1,
@@ -96,7 +95,6 @@ const projects = [
 const Projects = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-black via-[#111] to-black text-white">
-  
       {/* Main Content */}
       <main className=" mx-auto px-4 py-12 lg:py-32 lg:pt-10 lg:px-20">
         <div className="px-6">
@@ -116,7 +114,8 @@ const Projects = () => {
             {projects.map((project) => (
               <div
                 key={project.id}
-                className="group border border-[#1A1A1A] cursor-pointer rounded-lg hover:bg-gradient-to-br hover:from-[#111] hover:via-[#111] hover:to-[#111] hover:transition-all hover:duration-500 transition-all duration-800 hover:-translate-y-3 hover:shadow-2xl hover:shadow-black/50 overflow-hidden">
+                className="group border border-[#1A1A1A] cursor-pointer rounded-lg hover:bg-gradient-to-br hover:from-[#111] hover:via-[#111] hover:to-[#111] hover:transition-all hover:duration-500 transition-all duration-800 hover:-translate-y-3 hover:shadow-2xl hover:shadow-black/50 overflow-hidden"
+              >
                 <div className="p-6">
                   <h3 className="text-white text-3xl font-light mb-3 group-hover:text-gray-300 transition-colors">
                     {project.title}
@@ -130,7 +129,8 @@ const Projects = () => {
                     {project.techStack.map((tech, index) => (
                       <span
                         key={index}
-                        className="px-4 py-2 bg-stone-900 text-stone-500 text-xs rounded-md hover:bg-black/20 transition-colors">
+                        className="px-4 py-2 bg-stone-900 text-stone-500 text-xs rounded-md hover:bg-black/20 transition-colors"
+                      >
                         {tech}
                       </span>
                     ))}
@@ -144,11 +144,13 @@ const Projects = () => {
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-flex items-center justify-center w-8 h-8 text-gray-300 hover:bg-stone-800 rounded transition-colors"
-                        title="Github">
+                        title="Github"
+                      >
                         <svg
                           className="h-5 w-5"
                           fill="currentColor"
-                          viewBox="0 0 24 24">
+                          viewBox="0 0 24 24"
+                        >
                           <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
                         </svg>
                       </a>
@@ -157,12 +159,14 @@ const Projects = () => {
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-flex items-center justify-center w-8 h-8 text-gray-300 hover:bg-stone-800 rounded transition-colors"
-                        title="View website">
+                        title="View website"
+                      >
                         <svg
                           className="h-5 w-5"
                           fill="none"
                           stroke="currentColor"
-                          viewBox="0 0 24 24">
+                          viewBox="0 0 24 24"
+                        >
                           <path
                             strokeLinecap="round"
                             strokeLinejoin="round"
@@ -176,7 +180,8 @@ const Projects = () => {
                       href={project.link}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="px-4 py-2 bg-stone-900 text-stone-400 hover:bg-stone-800 text-sm rounded transition-colors">
+                      className="px-4 py-2 bg-stone-900 text-stone-400 hover:bg-stone-800 text-sm rounded transition-colors"
+                    >
                       View Website
                     </a>
                   </div>

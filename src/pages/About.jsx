@@ -84,7 +84,7 @@ const About = () => {
             </h1>
             <div className="lg:my-10 my-10 lg:mx-20 mx-5 border-t border-stone-700 py-5">
               <p className="text-stone-500 font-light py-3">
-                Frontend Developer Intern
+                Junior Developer Intern
               </p>
               <Link
                 className="lg:text-5xl text-2xl font-[300] flex lg:flex-row lg:gap-0 flex-col hover:text-stone-500 transition-ease duration-300"

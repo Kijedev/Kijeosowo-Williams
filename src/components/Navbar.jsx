@@ -77,7 +77,11 @@ const Homepage = () => {
     { name: "Articles", path: "/blogpost", icon: <IoBookOutline /> },
     { name: "Projects", path: "/projects", icon: <LuCodeXml /> },
     { name: "Contact", path: "/contact", icon: <RiContactsBook3Line /> },
-    { name: "Certification", path: "/certification", icon: <LiaCertificateSolid /> },
+    {
+      name: "Certification",
+      path: "/certification",
+      icon: <LiaCertificateSolid />,
+    },
   ];
 
   return (
@@ -97,7 +101,10 @@ const Homepage = () => {
           <nav className="hidden md:block">
             <ul className="text-white/50 text-[1rem] flex gap-5 font-light">
               {navItems.map((item) => (
-                <li key={item.name} className="flex items-center gap-2 hover:text-stone-400 transition-colors duration-500">
+                <li
+                  key={item.name}
+                  className="flex items-center gap-2 hover:text-stone-400 transition-colors duration-500"
+                >
                   <p>{item.icon}</p>
                   <Link
                     to={item.path}
@@ -123,7 +130,10 @@ const Homepage = () => {
             <div className="absolute top-16 right-6 bg-black/90 backdrop-blur-lg rounded-lg shadow-lg p-6 md:hidden">
               <ul className="flex flex-col gap-4 text-white text-lg">
                 {navItems.map((item) => (
-                  <li key={item.name} className="flex items-center gap-2 hover:text-stone-400 transition-colors duration-500">
+                  <li
+                    key={item.name}
+                    className="flex items-center gap-2 hover:text-stone-400 transition-colors duration-500"
+                  >
                     <p>{item.icon}</p>
                     <Link
                       to={item.path}
@@ -146,27 +156,27 @@ const Homepage = () => {
           </h1>
           <div className="flex flex-col gap-5">
             <h2 className="text-4xl lg:text-6xl lg:mt-20 font-light text-white">
-            I'm Kije Williams
-          </h2>
-          <p className="text-base lg:text-xl lg:leading-8 text-stone-600">
-            A Certified <strong>Altschool Africa</strong> Frontend Developer
-            <br />
-            dedicated to creating visually stunning and user-
-            <br />
-            friendly web and mobile applications.
-          </p>
-          <div>
-            <Link
-            to="/projects"
-            className="inline-flex items-center flex gap-2 px-10 py-3 bg-white text-black rounded hover:bg-[#ECE7E1] transition-colors duration-300 group"
-          >
-            View Projects
-            <ArrowRight className="w-3 h-3 group-hover:animate-bounce" />
-          </Link>
-          </div>
-          <div>
-            <Icons />
-          </div>
+              I'm Kije Williams
+            </h2>
+            <p className="text-base lg:text-xl lg:leading-8 text-stone-600">
+              A Certified <strong>Altschool Africa</strong> Frontend Developer
+              <br />
+              dedicated to creating visually stunning and user-
+              <br />
+              friendly web and mobile applications.
+            </p>
+            <div>
+              <Link
+                to="/projects"
+                className="inline-flex items-center flex gap-2 px-10 py-3 bg-white text-black rounded hover:bg-[#ECE7E1] transition-colors duration-300 group"
+              >
+                View Projects
+                <ArrowRight className="w-3 h-3 group-hover:animate-bounce" />
+              </Link>
+            </div>
+            <div>
+              <Icons />
+            </div>
           </div>
         </div>
 
