@@ -105,12 +105,12 @@ export default function Component() {
     <div className="min-h-screen bg-gradient-to-br from-[#111] via-black to-black">
       {/* Header Section */}
       <div className="relative overflow-hidden">
-        <div className="relative py-16 sm:py-24 lg:px-8">
-          <div className="mt-20 lg:mt-0 px-20 text-center">
+        <div className="relative pb-10 sm:py-24 lg:px-8">
+          <div className="lg:px-0 px-5 text-center">
             <h1 className="text-4xl font-light tracking-tight text-white sm:text-6xl lg:text-5xl">
               Articles
             </h1>
-            <p className="mt-3 text-lg leading-8 text-stone-600">
+            <p className="mt-3 lg:text-lg text-sm lg:leading-8 text-stone-600">
               I'm running a series where I document my journey of learning React
               Native. <br /> I share weekly updates on Medium & LinkedIn. Check
               it out!

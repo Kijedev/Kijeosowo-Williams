@@ -96,14 +96,14 @@ const Projects = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-black via-[#111] to-black text-white">
       {/* Main Content */}
-      <main className=" mx-auto px-4 py-12 lg:py-32 lg:pt-10 lg:px-20">
+      <main className="py-12 lg:py-32 lg:pt-10 lg:px-20">
         <div className="px-6">
           {/* Hero Section */}
           <div className="mb-16 text-center">
             <h1 className="lg:text-5xl text-2xl md:text-3xl font-light text-white mb-6">
               Projects
             </h1>
-            <p className="text-lg text-stone-600 leading-relaxed">
+            <p className="text-lg text-stone-600">
               A curation of my works across web and mobile development, <br />{" "}
               showcasing modern design and cutting-edge technologies.
             </p>

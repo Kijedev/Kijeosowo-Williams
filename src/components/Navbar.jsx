@@ -2,14 +2,18 @@
 
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router";
+// Pages
+import Projects from "../pages/Projects";
+import Blogpost from "../pages/Blogpost";
+import Certification from "../pages/Certification";
+import Footer from "./Footer";
+// components
 import Icons from "./Icons";
 import Logo from "../components/Logo";
 import Marquee from "../components/Marquee";
+// Icons
 import { ArrowRight } from "lucide-react";
-import Projects from "../pages/Projects";
 import { FiMenu, FiX } from "react-icons/fi";
-import Blogpost from "../pages/Blogpost";
-import Footer from "./Footer";
 import { CiUser } from "react-icons/ci";
 import { IoBookOutline } from "react-icons/io5";
 import { LuCodeXml } from "react-icons/lu";
@@ -54,7 +58,7 @@ const Homepage = () => {
     location.pathname === "/" && !sessionStorage.getItem("visited")
   );
   const [showContent, setShowContent] = useState(false);
-  const [menuOpen, setMenuOpen] = useState(false); // 👈 menu toggle
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     if (loading) {
@@ -74,12 +78,12 @@ const Homepage = () => {
 
   const navItems = [
     { name: "About", path: "/about", icon: <CiUser /> },
-    { name: "Articles", path: "/blogpost", icon: <IoBookOutline /> },
-    { name: "Projects", path: "/projects", icon: <LuCodeXml /> },
+    { name: "Articles", path: "#blogpost", icon: <IoBookOutline /> },
+    { name: "Projects", path: "#projects", icon: <LuCodeXml /> },
     { name: "Contact", path: "/contact", icon: <RiContactsBook3Line /> },
     {
       name: "Certification",
-      path: "/certification",
+      path: "#certification",
       icon: <LiaCertificateSolid />,
     },
   ];
@@ -93,7 +97,7 @@ const Homepage = () => {
             : "translate-x-full opacity-0"
         }`}
       >
-        {/* ✅ Navbar */}
+        {/* Navbar */}
         <div className="flex justify-between lg:px-28 items-center px-6 py-6 backdrop-blur-lg fixed top-0 left-0 right-0 z-50">
           <Logo />
 
@@ -151,10 +155,10 @@ const Homepage = () => {
 
         {/* Hero Section */}
         <div className="flex flex-col justify-center items-center text-center min-h-screen px-6 space-y-6">
-          <h1 className="text-stone-400 font-semibold lg:text-[12rem] text-xl flex gap-2 justify-center items-center">
-            Hello there! <p className="text- animate-wiggle -mt-2">👋</p>
-          </h1>
           <div className="flex flex-col gap-5">
+            {/* <h1 className="text-stone-400 font-semibold lg:text-[1rem] text-xl flex gap-2 justify-center items-center">
+            Hello there! <p className="text- animate-wiggle -mt-2">👋</p>
+          </h1> */}
             <h2 className="text-4xl lg:text-6xl lg:mt-20 font-light text-white">
               I'm Kije Williams
             </h2>
@@ -186,24 +190,29 @@ const Homepage = () => {
         {/* Blog */}
         <Blogpost />
 
+        {/* Certification */}
+        <Certification />
+
         {/* Footer CTA */}
-        <div className="text-center bg-black py-20 px-10 lg:px-0">
-          <div className="inline-flex flex-col items-center gap-6 px-16 py-16 rounded-3xl border-2 border-white/20">
+        <div className="mt-[20%] lg:text-center text-left bg-black py-20 px-5 lg:px-0">
+          <div className="inline-flex flex-col items-center gap-6 lg:px-16 px-5 py-16 rounded-3xl border-2 border-white/20">
             <div className="text-gray-300 space-y-4">
-              <h3 className="text-3xl lg:text-5xl font-light">
+              <h3 className="text-4xl lg:text-5xl font-light">
                 Ready to bring your ideas to life?
               </h3>
               <p className="text-xl text-stone-600">
                 Let's create something amazing
               </p>
             </div>
-            <Link
-              to="/contact"
-              className="px-8 py-3 bg-white flex gap-2 hover:bg-[#ECE7E1] text-black rounded transition-colors duration-300 group"
-            >
-              Let's Work Together{" "}
-              <ArrowRight className="h-3 w-3 group-hover:animate-bounce mt-2" />
-            </Link>
+            <div>
+              <Link
+                to="/contact"
+                className="px-8 py-3 bg-white inline-flex gap-2 hover:bg-[#ECE7E1] text-black rounded transition-colors duration-300 group"
+              >
+                Let's Work Together{" "}
+                <ArrowRight className="h-3 w-3 group-hover:animate-bounce mt-2" />
+              </Link>
+            </div>
           </div>
         </div>
       </div>
