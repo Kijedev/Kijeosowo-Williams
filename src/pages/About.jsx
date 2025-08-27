@@ -88,7 +88,8 @@ const About = () => {
               </p>
               <Link
                 className="lg:text-5xl text-2xl font-[300] flex lg:flex-row lg:gap-0 flex-col hover:text-stone-500 transition-ease duration-300"
-                title="View Details">
+                title="View Details"
+              >
                 WebInfluencers (Remote) -{" "}
                 <p className="flex">
                   <CiLocationOn className="lg:flex hidden" /> UAE ( Dubai )
@@ -102,7 +103,8 @@ const About = () => {
               </p>
               <Link
                 className="lg:text-5xl text-2xl font-[300] flex lg:flex-row flex-col hover:text-stone-500 transition-ease duration-300"
-                title="View Details">
+                title="View Details"
+              >
                 Taoltech (Remote) -{" "}
                 <p className="flex">
                   <CiLocationOn className="lg:flex hidden" /> Lagos, Nigeria
