@@ -19,6 +19,7 @@ import { IoBookOutline } from "react-icons/io5";
 import { LuCodeXml } from "react-icons/lu";
 import { RiContactsBook3Line } from "react-icons/ri";
 import { LiaCertificateSolid } from "react-icons/lia";
+import { FlipWordsDemo } from "../components/flip-words-demo";
 
 const Preloader = () => {
   const [progress, setProgress] = useState(0);
@@ -154,21 +155,17 @@ const Homepage = () => {
         </div>
 
         {/* Hero Section */}
-        <div className="flex flex-col justify-center items-center text-center min-h-screen px-6 space-y-6">
+        <div className="flex flex-col justify-center items-center text-left min-h-screen px-6 space-y-6">
           <div className="flex flex-col gap-5">
             {/* <h1 className="text-stone-400 font-semibold lg:text-[1rem] text-xl flex gap-2 justify-center items-center">
             Hello there! <p className="text- animate-wiggle -mt-2">👋</p>
           </h1> */}
+            <FlipWordsDemo />
+
             <h2 className="text-4xl lg:text-6xl lg:mt-20 font-light text-white">
               I'm Kije Williams
             </h2>
-            <p className="text-base lg:text-xl lg:leading-8 text-stone-600">
-              A Certified <strong>Altschool Africa</strong> Frontend Developer
-              <br />
-              dedicated to creating visually stunning and user-
-              <br />
-              friendly web and mobile applications.
-            </p>
+            
             <div>
               <Link
                 to="/projects"
