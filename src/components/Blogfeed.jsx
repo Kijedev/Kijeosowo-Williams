@@ -112,8 +112,7 @@ export default function Component() {
             </h1>
             <p className="mt-3 lg:text-lg text-sm lg:leading-8 text-stone-600">
               I'm running a series where I document my journey of learning React
-              Native. <br /> I share weekly updates on Medium & LinkedIn. Check
-              it out!
+              Native. I share weekly updates on Medium & LinkedIn. Check it out!
             </p>
             <div className="mt-8 flex items-center gap-2 text-sm text-stone-600 text-center justify-center">
               <Calendar className="h-4 w-4" />

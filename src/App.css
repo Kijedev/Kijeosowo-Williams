@@ -111,7 +111,7 @@ body {
 
 .modern-marquee {
   margin-top: 2.5rem;
-  background: linear-gradient(to right, #000000, #111111, black);
+  /* background: linear-gradient(to right, #000000, #111111, black); */
   padding: 3rem 0;
   overflow: hidden;
   position: relative;
@@ -162,6 +162,7 @@ body {
 
 .tech-name {
   font-weight: 500;
+  font-size: 7rem;
 }
 
 .star {

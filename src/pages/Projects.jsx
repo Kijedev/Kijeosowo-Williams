@@ -104,7 +104,7 @@ const Projects = () => {
               Projects
             </h1>
             <p className="text-lg text-stone-600">
-              A curation of my works across web and mobile development, <br />{" "}
+              A curation of my works across web and mobile development,
               showcasing modern design and cutting-edge technologies.
             </p>
           </div>

@@ -8,9 +8,7 @@ import Blogpost from "../pages/Blogpost";
 import Certification from "../pages/Certification";
 import Footer from "./Footer";
 // components
-import Icons from "./Icons";
 import Logo from "../components/Logo";
-import Marquee from "../components/Marquee";
 // Icons
 import { ArrowRight } from "lucide-react";
 import { FiMenu, FiX } from "react-icons/fi";
@@ -156,35 +154,13 @@ const Homepage = () => {
 
         {/* Hero Section */}
         <div className="flex flex-col justify-center items-center text-left min-h-screen px-6 space-y-6">
-          <div className="flex flex-col gap-5">
-            {/* <h1 className="text-stone-400 font-semibold lg:text-[1rem] text-xl flex gap-2 justify-center items-center">
-            Hello there! <p className="text- animate-wiggle -mt-2">👋</p>
-          </h1> */}
-            <FlipWordsDemo />
-
-            <h2 className="text-4xl lg:text-6xl lg:mt-20 font-light text-white">
-              I'm Kije Williams
-            </h2>
-            
-            <div>
-              <Link
-                to="/projects"
-                className="inline-flex items-center flex gap-2 px-10 py-3 bg-white text-black rounded hover:bg-[#ECE7E1] transition-colors duration-300 group"
-              >
-                View Projects
-                <ArrowRight className="w-3 h-3 group-hover:animate-bounce" />
-              </Link>
-            </div>
-            <div>
-              <Icons />
-            </div>
-          </div>
+          <FlipWordsDemo />
         </div>
 
         {/* Projects */}
         <Projects />
 
-        {/* Blog */}
+        {/* Articles */}
         <Blogpost />
 
         {/* Certification */}
@@ -214,6 +190,7 @@ const Homepage = () => {
         </div>
       </div>
 
+      {/* Footer */}
       <Footer />
     </section>
   );

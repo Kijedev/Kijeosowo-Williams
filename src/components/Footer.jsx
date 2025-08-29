@@ -6,47 +6,54 @@ import { FaGoogleDrive } from "react-icons/fa";
 import { FaWhatsapp } from "react-icons/fa";
 import { Link } from "react-router";
 import { CiLocationOn } from "react-icons/ci";
+import Marquee from "../components/Marquee";
 
 const Footer = () => {
   return (
     <section className="bg-gradient-to-br from-black via-[#111] to-black text-white">
+      <Marquee />
       <div className="flex flex-col lg:flex-row justify-between items-center lg:py-10 py-10 lg:px-20 pr-10">
         {/* Icons */}
         <div className="flex flex-col-reverse lg:flex-row gap-10 items-center lg:ml-10 lg:mr-10">
-          <div className="flex lg:flex-col gap-5 text-sm lg:justify-start justify-left lg:mt-0 text-white -ml-[50%] lg:ml-0">
+          <div className="flex lg:flex-col text-[1.2rem] gap-5 lg:justify-start justify-left lg:mt-0 text-white -ml-[50%] lg:ml-0">
             <Link
               to="https://www.linkedin.com/in/williams-kijeosowo-237749224/"
               className="hover:text-stone-600 transition-colors duration-500"
               title="LinkedIn"
-              target="_blank">
+              target="_blank"
+            >
               <FaLinkedinIn />
             </Link>
             <Link
               to="https://github.com/Kijeosowo?tab=repositories"
               className="hover:text-stone-600 transition-colors duration-500"
               title="Github"
-              target="_blank">
+              target="_blank"
+            >
               <FaGithub />
             </Link>
             <Link
               to="https://docs.google.com/document/d/1jD5IhwyadOyXQYBmC6Vg6MtcJY50buqClqaBotXe9zQ/edit?usp=sharing"
               className="hover:text-stone-600 transition-colors duration-500"
               title="Google Drive"
-              target="_blank">
+              target="_blank"
+            >
               <FaGoogleDrive />
             </Link>
             <Link
               to="https://x.com/Kijeosowo1"
               className="hover:text-stone-600 transition-colors duration-500"
               title="X"
-              target="_blank">
+              target="_blank"
+            >
               <FaTwitter />
             </Link>
             <Link
               to="https://wa.link/41kcfj"
               className="hover:text-stone-600 transition-colors duration-500"
               title="WhatsApp"
-              target="_blank">
+              target="_blank"
+            >
               <FaWhatsapp />
             </Link>
           </div>
@@ -61,7 +68,7 @@ const Footer = () => {
               friendly web and mobile applications.
             </p>
             <p className="text-stone-500 text-lg flex items-center gap-2">
-              <CiLocationOn  /> Lagos, Nigeria.
+              <CiLocationOn /> Lagos, Nigeria.
             </p>
           </div>
         </div>

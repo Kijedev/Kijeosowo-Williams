@@ -4,54 +4,59 @@ import { useState } from "react";
 // import "./modern-marquee.css";
 
 const technologies = [
-  "React.js",
-  "TypeScript",
-  "Next.js",
-  "JavaScript",
-  "Tailwind CSS",
-  "HTML5",
-  "CSS3",
-  "AI",
-  "ChatGPT",
-  "Claude",
-  "WordPress",
-  "React Native (Expo)",
-  "Git",
-  "GitHub",
-  "REST API",
-  "Vue.js",
-  "Bootstrap",
-  "Netlify",
-  "Vercel",
+  "Let's work together.",
+  "Let's work together.",
+  // "React.js",
+  // "TypeScript",
+  // "Next.js",
+  // "JavaScript",
+  // "Tailwind CSS",
+  // "HTML5",
+  // "CSS3",
+  // "AI",
+  // "ChatGPT",
+  // "Claude",
+  // "WordPress",
+  // "React Native (Expo)",
+  // "Git",
+  // "GitHub",
+  // "REST API",
+  // "Vue.js",
+  // "Bootstrap",
+  // "Netlify",
+  // "Vercel",
 ];
 
 function MarqueeRow({
   technologies,
   direction = "left",
-  speed = 50,
+  speed = 100,
   className = "",
 }) {
   const [isPaused, setIsPaused] = useState(false);
 
   // Duplicate the array to create seamless loop
-  const duplicatedTechs = [...technologies, ...technologies];
+  const duplicatedTechs = [...technologies];
+  // const duplicatedTechs = [...technologies, ...technologies];
 
   return (
     <div
       className={`marquee-container ${className}`}
       onMouseEnter={() => setIsPaused(true)}
-      onMouseLeave={() => setIsPaused(false)}>
+      onMouseLeave={() => setIsPaused(false)}
+    >
       <div
         className={`marquee-content ${
           direction === "left" ? "marquee-left" : "marquee-right"
         } ${isPaused ? "paused" : ""}`}
         style={{
           animationDuration: `${speed}s`,
-        }}>
+        }}
+      >
         {duplicatedTechs.map((tech, index) => (
           <span key={index} className="marquee-item">
             <span className="tech-name">{tech}</span>
-            <span className="star">🌟</span>
+            {/* <span className="star">🌟</span> */}
           </span>
         ))}
       </div>
@@ -72,12 +77,12 @@ export default function ModernMarquee() {
         />
 
         {/* Second row - moving left */}
-        <MarqueeRow
+        {/* <MarqueeRow
           technologies={technologies}
           direction="left"
           speed={70}
           className="large-text"
-        />
+        /> */}
 
         {/* Third row - moving right (optional, slower) */}
         {/* <MarqueeRow
