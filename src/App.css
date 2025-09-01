@@ -45,7 +45,9 @@
     opacity: 0;
   }
 }
-
+.Satisfy {
+  font-family: "Satisfy", cursive;
+}
 .App {
   min-height: 100vh;
   background-color: #f3f4f6;
@@ -162,7 +164,7 @@ body {
 
 .tech-name {
   font-weight: 500;
-  font-size: 7rem;
+  color: white;
 }
 
 .star {

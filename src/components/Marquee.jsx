@@ -1,6 +1,6 @@
-"use client";
+"use client"
 
-import { useState } from "react";
+import { useState } from "react"
 // import "./modern-marquee.css";
 
 const technologies = [
@@ -25,19 +25,13 @@ const technologies = [
   // "Bootstrap",
   // "Netlify",
   // "Vercel",
-];
+]
 
-function MarqueeRow({
-  technologies,
-  direction = "left",
-  speed = 100,
-  className = "",
-}) {
-  const [isPaused, setIsPaused] = useState(false);
+function MarqueeRow({ technologies, direction = "left", speed = 100, className = "" }) {
+  const [isPaused, setIsPaused] = useState(false)
 
   // Duplicate the array to create seamless loop
-  const duplicatedTechs = [...technologies];
-  // const duplicatedTechs = [...technologies, ...technologies];
+  const duplicatedTechs = [...technologies]
 
   return (
     <div
@@ -55,13 +49,13 @@ function MarqueeRow({
       >
         {duplicatedTechs.map((tech, index) => (
           <span key={index} className="marquee-item">
-            <span className="tech-name">{tech}</span>
+            <span className="tech-name lg:text-[7rem] text-7xl">{tech}</span>
             {/* <span className="star">🌟</span> */}
           </span>
         ))}
       </div>
     </div>
-  );
+  )
 }
 
 export default function ModernMarquee() {
@@ -69,12 +63,7 @@ export default function ModernMarquee() {
     <div className="modern-marquee">
       <div className="marquee-rows">
         {/* First row - moving right */}
-        <MarqueeRow
-          technologies={technologies}
-          direction="right"
-          speed={70}
-          className="large-text"
-        />
+        <MarqueeRow technologies={technologies} direction="right" speed={15} className="large-text" />
 
         {/* Second row - moving left */}
         {/* <MarqueeRow
@@ -97,5 +86,5 @@ export default function ModernMarquee() {
       <div className="fade-left"></div>
       <div className="fade-right"></div>
     </div>
-  );
+  )
 }

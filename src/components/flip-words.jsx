@@ -96,4 +96,3 @@ export const FlipWords = ({ words, duration = 3000, className }) => {
 };
 
 export default FlipWords;
-// ...existing code...

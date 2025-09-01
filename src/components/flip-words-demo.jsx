@@ -13,7 +13,7 @@ export function FlipWordsDemo() {
         Build
         <FlipWords words={words} />
         websites <br /> and mobile apps with <br />
-        <span className="text-[#ECE7E1] font-semibold">Kije Williams</span>{" "}
+        <span className="text-[#ECE7E1] Satisfy">Kije Williams</span>{" "}
       </div>
       <p className="text-base lg:text-xl lg:leading-8 text-stone-600 py-8">
         A Certified <strong>Altschool Africa</strong> Frontend Developer
