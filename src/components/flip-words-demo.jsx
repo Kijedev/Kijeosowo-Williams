@@ -1,14 +1,14 @@
 // import { FlipWords } from "./flip-words";
 import FlipWords from "../components/flip-words";
 import { Link } from "react-router";
-import { ArrowRight, ChevronDown } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import Icons from "../components/Icons";
 
 export function FlipWordsDemo() {
   const words = ["better", "user-friendly", "beautiful", "modern"];
 
   return (
-    <div className="flex flex-col justify-left mx-auto">
+    <div className="flex flex-col justify-left">
       <div className="lg:text-7xl text-5xl text-neutral-500 dark:text-neutral-500">
         Build
         <FlipWords words={words} />
@@ -36,13 +36,6 @@ export function FlipWordsDemo() {
           <Icons />
         </div>
       </div>
-
-      {/* <div className="flex mt-5 float-right text-white">
-        <p className="">Scroll Down</p>
-        <p>
-          <ChevronDown />
-        </p>
-      </div> */}
     </div>
   );
 }

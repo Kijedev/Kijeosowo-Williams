@@ -153,7 +153,7 @@ const Homepage = () => {
         </div>
 
         {/* Hero Section */}
-        <div className="flex flex-col justify-center items-center text-left min-h-screen px-6 space-y-6">
+        <div className="flex flex-col justify-center items-center min-h-screen px-6 space-y-6">
           <FlipWordsDemo />
         </div>
 

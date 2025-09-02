@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import image from "../Image/profilepic.jpg";
-import Logo from "../components/Logo";
 import { Link } from "react-router";
 import Download from "../components/Download";
 import { CiLocationOn } from "react-icons/ci";
