@@ -3,8 +3,19 @@ import { Link } from "react-router";
 import Icons from "../components/Icons";
 import Form from "../components/Form";
 import kijeLogo from "../Image/kije williams.png";
+import { motion } from "framer-motion";
 
 const Contact = () => {
+  const popupVariants = {
+    hidden: { opacity: 0, scale: 0.8, y: 40 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      y: 0,
+      transition: { type: "spring", stiffness: 80, damping: 15 },
+    },
+  };
+
   return (
     <section className="bg-gradient-to-br from-black via-[#111] to-black text-[#ECE7E1]">
       {/* Animation */}
@@ -16,9 +27,15 @@ const Contact = () => {
       </div>
 
       <div className="lg:flex lg:justify-around lg:items-center lg:ml-20 lg:mt-[-100vh] lg:h-[100vh] -mt-[90vh] md:mt-[-70%] md:ml-[5%] ml-5 mr-5">
-        <aside className="flex gap-5 mt-20 lg:mt-0">
+        <motion.aside
+          className="flex gap-5 mt-20 lg:mt-0"
+          variants={popupVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+        >
           <div className="flex flex-col">
-            <h1 className="text-[#ECE7E1] py-10 lg:text-8xl md:text-[10rem] text-[5rem] animate-fade-up animate-once animate-delay-[500ms]">
+            <h1 className="text-[#ECE7E1] py-10 lg:text-[10rem] md:text-[10rem] text-[5rem] animate-fade-up animate-once animate-delay-[500ms] Satisfy">
               Hello!
             </h1>
             <p className="text-stone-600 text-lg">
@@ -29,7 +46,8 @@ const Contact = () => {
               Reach me @:{" "}
               <Link
                 className="text-stone-400"
-                to="mailto:kijewilliams01@gmail.com?subject=Hello%20There&body=I%20want%20to%20create%20a%20website">
+                to="mailto:kijewilliams01@gmail.com?subject=Hello%20There&body=I%20want%20to%20create%20a%20website"
+              >
                 kijewilliams01@gmail.com
               </Link>
             </p>
@@ -38,7 +56,7 @@ const Contact = () => {
               <Icons />
             </div>
           </div>
-        </aside>
+        </motion.aside>
 
         <aside>
           <Form />

@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router";
 import { ArrowRight } from "lucide-react";
+
 const Footercta = () => {
   const popupVariants = {
     hidden: { opacity: 0, scale: 0.8, y: 40 },
