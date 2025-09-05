@@ -18,6 +18,7 @@ import { LuCodeXml } from "react-icons/lu";
 import { RiContactsBook3Line } from "react-icons/ri";
 import { LiaCertificateSolid } from "react-icons/lia";
 import { FlipWordsDemo } from "../components/flip-words-demo";
+import { DotBackgroundDemo } from "../components/DotBackgroundDemo";
 
 const Preloader = () => {
   const [progress, setProgress] = useState(0);
@@ -109,12 +110,12 @@ const Homepage = () => {
                 className="flex items-center gap-2 hover:text-stone-400 transition-colors duration-500"
               >
                 <p>{item.icon}</p>
-                <Link
-                  to={item.path}
+                <a
+                  href={item.path}
                   className="hover:text-stone-400 text-white transition-colors duration-500"
                 >
                   {item.name}
-                </Link>
+                </a>
               </li>
             ))}
           </ul>
@@ -153,8 +154,9 @@ const Homepage = () => {
       </div>
 
       {/* Hero Section */}
-      <div className="flex flex-col justify-center items-center min-h-screen px-6 space-y-6">
-        <FlipWordsDemo />
+      <div className="flex flex-col justify-center items-center min-h-screen space-y-6">
+        {/* <FlipWordsDemo /> */}
+        <DotBackgroundDemo />
       </div>
 
       {/* Projects */}

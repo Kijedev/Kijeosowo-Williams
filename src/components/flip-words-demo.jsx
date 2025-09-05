@@ -4,6 +4,7 @@ import { Link } from "react-router";
 import { ArrowRight } from "lucide-react";
 import Icons from "../components/Icons";
 import { motion } from "framer-motion";
+import '@fontsource/birthstone';
 
 // Animation variants
 const popupVariants = {
@@ -32,7 +33,7 @@ export function FlipWordsDemo() {
         Build
         <FlipWords words={words} />
         websites <br /> and mobile apps with <br />
-        <span className="text-[#ECE7E1] Satisfy">Kije Williams</span>{" "}
+        <span className="text-[#ECE7E1] Birthstone">Kije Williams</span>{" "}
       </motion.div>
 
       {/* Paragraph */}

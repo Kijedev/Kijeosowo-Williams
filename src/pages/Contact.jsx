@@ -4,6 +4,7 @@ import Icons from "../components/Icons";
 import Form from "../components/Form";
 import kijeLogo from "../Image/kije williams.png";
 import { motion } from "framer-motion";
+import { DotBackgroundDemo } from "../components/DotBackgroundDemo";
 
 const Contact = () => {
   const popupVariants = {
@@ -25,7 +26,6 @@ const Contact = () => {
           <img src={kijeLogo} />
         </Link>
       </div>
-
       <div className="lg:flex lg:justify-around lg:items-center lg:ml-20 lg:mt-[-100vh] lg:h-[100vh] -mt-[90vh] md:mt-[-70%] md:ml-[5%] ml-5 mr-5">
         <motion.aside
           className="flex gap-5 mt-20 lg:mt-0"
@@ -63,6 +63,75 @@ const Contact = () => {
         </aside>
         <br />
       </div>
+
+      {/*  */}
+      <article className="prose prose-lg dark:prose-invert mx-auto px-4 py-12 max-w-3xl">
+        {/* Breadcrumb */}
+        <Link
+          to="/articles"
+          className="text-sm text-gray-500 hover:text-blue-500"
+        >
+          ← Back to Articles
+        </Link>
+
+        {/* Hero */}
+        <div className="my-6">
+          <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white">
+            Designing an Article Page for Your Portfolio Website
+          </h1>
+          <p className="text-gray-500 mt-2">
+            Published Sep 4, 2025 · 5 min read
+          </p>
+        </div>
+
+        <img
+          src="/images/article-hero.jpg"
+          alt="Article Hero"
+          className="rounded-2xl shadow-lg mb-10"
+        />
+
+        {/* Article Content */}
+        <div className="space-y-6 text-gray-700 dark:text-gray-300 leading-relaxed">
+          <p>
+            Your article page is not just about the content — it’s about how you
+            present it. A clean design improves readability and helps you
+            showcase your expertise.
+          </p>
+
+          <h2 className="text-2xl font-semibold">1. Start with Readability</h2>
+          <p>
+            Use a single column layout, with plenty of whitespace and larger
+            line spacing. Readers should never feel overwhelmed.
+          </p>
+
+          <blockquote className="border-l-4 border-blue-500 pl-4 italic text-gray-600 dark:text-gray-400">
+            "Good design is as little design as possible." – Dieter Rams
+          </blockquote>
+
+          <h2 className="text-2xl font-semibold">2. Add Code Blocks</h2>
+          <pre className="bg-gray-900 text-green-400 p-4 rounded-lg overflow-x-auto">
+            <code>{`function helloWorld() {
+  console.log("Hello, world!");
+}`}</code>
+          </pre>
+
+          <p>
+            Code snippets are a great way to show technical knowledge. Make sure
+            they are styled for readability.
+          </p>
+        </div>
+
+        {/* Footer Section */}
+        <div className="border-t mt-12 pt-6 flex justify-between text-sm text-gray-500">
+          <Link to="/articles/previous" className="hover:text-blue-500">
+            ← Previous Article
+          </Link>
+          <Link to="/articles/next" className="hover:text-blue-500">
+            Next Article →
+          </Link>
+        </div>
+      </article>
+      );
     </section>
   );
 };

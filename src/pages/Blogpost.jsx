@@ -2,7 +2,9 @@ import React from "react";
 import Blogfeed from "../components/Blogfeed";
 
 const Blogpost = () => {
-  return <Blogfeed />;
+  return <section id="blogpost">
+    <Blogfeed />
+  </section>;
 };
 
 export default Blogpost;

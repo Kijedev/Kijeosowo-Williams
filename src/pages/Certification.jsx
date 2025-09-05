@@ -17,7 +17,7 @@ const Certification = () => {
     },
   };
   return (
-    <div className="bg-gradient-to-br from-black via-[#111111] to-black">
+    <div className="bg-gradient-to-br from-black via-[#111111] to-black py-24" id="certification">
       {/* Certification */}
       <motion.div
         className="pt-10 mb-8 flex flex-col gap-4 text-center"

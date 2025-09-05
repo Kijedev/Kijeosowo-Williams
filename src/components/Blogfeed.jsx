@@ -115,7 +115,7 @@ export default function Component() {
     <div className="min-h-screen bg-gradient-to-br from-[#111] via-black to-black">
       {/* Header Section */}
       <div className="relative overflow-hidden">
-        <div className="relative pb-10 sm:py-24 lg:px-8">
+        <div className="relative pb-10 py-24 lg:px-8">
           <motion.div
             className="lg:px-0 px-5 text-center"
             variants={popupVariants}
