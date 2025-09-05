@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@emailjs/browser": "^3.12.1",
+    "@tanstack/react-query": "^5.86.0",
     "clsx": "^2.1.1",
     "gsap": "^3.13.0",
     "lucide-react": "^0.515.0",
@@ -24,6 +25,7 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.17.0",
+    "@tanstack/eslint-plugin-query": "^5.86.0",
     "@types/react": "^18.3.17",
     "@types/react-dom": "^18.3.5",
     "@vitejs/plugin-react": "^4.3.4",

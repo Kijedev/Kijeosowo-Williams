@@ -7,7 +7,7 @@ import Week5 from "../Image/Week_5new.png";
 import Week6 from "../Image/Week_6new.png";
 import Week7 from "../Image/Week_7new.png";
 import Week8 from "../Image/Week_8new.png";
-import Logo from "../components/Logo";
+import { motion } from "framer-motion";
 
 export default function Component() {
   const blogPosts = [
@@ -101,12 +101,28 @@ export default function Component() {
     },
   ];
 
+  const popupVariants = {
+    hidden: { opacity: 0, scale: 0.8, y: 40 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      y: 0,
+      transition: { type: "spring", stiffness: 80, damping: 15 }
+    },
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-[#111] via-black to-black">
       {/* Header Section */}
       <div className="relative overflow-hidden">
         <div className="relative pb-10 sm:py-24 lg:px-8">
-          <div className="lg:px-0 px-5 text-center">
+          <motion.div
+            className="lg:px-0 px-5 text-center"
+            variants={popupVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
+          >
             <h1 className="text-4xl font-light tracking-tight text-white sm:text-6xl lg:text-5xl">
               Articles
             </h1>
@@ -118,7 +134,7 @@ export default function Component() {
               <Calendar className="h-4 w-4" />
               <span>Weekly Updates • React Native with Expo</span>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
 
@@ -127,9 +143,13 @@ export default function Component() {
         <div className="mx-auto max-w-7xl">
           <div className="grid gap-20 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2">
             {blogPosts.map((post, index) => (
-              <article
+              <motion.article
                 key={index}
                 className="lg:h-[500px] lg:w-[650px] relative bg-black backdrop-blur-sm lg:rounded-[30px] rounded-[10px] overflow-hidden border border-stone-800 hover:border-stone-700 transition-all duration-300 hover:shadow-md hover:shadow-[#333] cursor-pointer"
+                variants={popupVariants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.2 }}
               >
                 {/* Image */}
                 <div className="relative overflow-hidden lg:pt-[60px]">
@@ -184,7 +204,7 @@ export default function Component() {
 
                 {/* Hover Effect Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-blue-600/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
-              </article>
+              </motion.article>
             ))}
           </div>
         </div>
@@ -193,7 +213,13 @@ export default function Component() {
       {/* Footer Section */}
       <div className="bg-black backdrop-blur-sm">
         <div className="mx-auto max-w-7xl px-6 py-12 lg:px-8">
-          <div className="text-center">
+          <motion.div
+            className="text-center"
+            variants={popupVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
+          >
             <p className="text-white text-5xl lg:text-3xl font-light mb-8 text-left">
               Stay updated with my weekly progress as I continue learning React
               Native and building amazing mobile applications.
@@ -218,7 +244,7 @@ export default function Component() {
                 <ArrowRight className="h-4 w-4" />
               </a>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </div>
