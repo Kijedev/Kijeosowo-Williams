@@ -26,7 +26,7 @@ const Footercta = () => {
             <h3 className="text-4xl lg:text-5xl font-light">
               Ready to bring your ideas to life?
             </h3>
-            <p className="text-xl text-stone-600">
+            <p className="text-xl dark:text-neutral-600">
               Let's create something amazing
             </p>
           </div>

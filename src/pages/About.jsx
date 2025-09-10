@@ -37,16 +37,16 @@ const About = () => {
         <>
           {/* Header */}
           <header className="px-6 lg:px-24 lg:mt-[-90vh] mt-[-90vh]">
-            <h1 className="text-[5rem] text-white font-light md:text-8xl mt-10 md:mt-20 lg:mt-0 lg:text-[10rem] Satisfy animate-fade-up animate-once animate-delay-[500ms]">
+            <h1 className="text-[5rem] text-white font-light md:text-8xl mt-10 md:mt-20 lg:mt-0 lg:text-[10rem] Birthstone animate-fade-up animate-once animate-delay-[500ms]">
               About
             </h1>
           </header>
 
           {/* Content Section */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 px-6 lg:px-24 mt-5">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 px-6 lg:px-24">
             <aside className="lg:py-20">
               <div className="flex flex-col gap-6 text-sm md:text-base lg:text-md leading-6 lg:leading-[25px] text-stone-800 animate-fade-up animate-once animate-delay-[500ms]">
-                <p className="text-justify text-stone-600 lg:text-[1.2rem] flex flex-col gap-1">
+                <p className="text-justify dark:text-neutral-600 lg:text-[1.2rem] flex flex-col gap-1">
                   <motion.span
                     variants={popupVariants}
                     initial="hidden"
@@ -126,7 +126,7 @@ const About = () => {
               Work History
             </h1>
             <div className="lg:my-10 my-10 lg:mx-20 mx-5 border-t border-stone-700 py-5">
-              <p className="text-stone-500 font-light py-3">
+              <p className="dark:text-neutral-600 py-3">
                 Junior Developer Intern
               </p>
               <Link
@@ -141,7 +141,7 @@ const About = () => {
             </div>
 
             <div className="lg:my-10 my-10 lg:mx-20 mx-5 border-t border-stone-700 py-5">
-              <p className="text-stone-500 font-light py-3">
+              <p className="dark:text-neutral-600 py-3">
                 Frontend Developer
               </p>
               <Link

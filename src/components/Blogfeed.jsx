@@ -113,31 +113,6 @@ export default function Component() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-[#111] via-black to-black">
-      {/* Header Section */}
-      <div className="relative overflow-hidden">
-        <div className="relative pb-10 py-24 lg:px-8">
-          <motion.div
-            className="lg:px-0 px-5 text-center"
-            variants={popupVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.2 }}
-          >
-            <h1 className="text-4xl font-light tracking-tight text-white sm:text-6xl lg:text-5xl">
-              Articles
-            </h1>
-            <p className="mt-3 lg:text-lg text-sm lg:leading-8 text-stone-600">
-              I'm running a series where I document my journey of learning React
-              Native. I share weekly updates on Medium & LinkedIn. Check it out!
-            </p>
-            <div className="mt-8 flex items-center gap-2 text-sm text-stone-600 text-center justify-center">
-              <Calendar className="h-4 w-4" />
-              <span>Weekly Updates • React Native with Expo</span>
-            </div>
-          </motion.div>
-        </div>
-      </div>
-
       {/* Blog Posts Grid */}
       <div className="bg-gradient-to-br from-[#111] via-black to-black overflow-hidden px-5 md:px-0 lg:px-0 xl:px-0">
         <div className="mx-auto max-w-7xl">

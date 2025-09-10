@@ -17,7 +17,6 @@ import { IoBookOutline } from "react-icons/io5";
 import { LuCodeXml } from "react-icons/lu";
 import { RiContactsBook3Line } from "react-icons/ri";
 import { LiaCertificateSolid } from "react-icons/lia";
-import { FlipWordsDemo } from "../components/flip-words-demo";
 import { DotBackgroundDemo } from "../components/DotBackgroundDemo";
 
 const Preloader = () => {
@@ -155,7 +154,6 @@ const Homepage = () => {
 
       {/* Hero Section */}
       <div className="flex flex-col justify-center items-center min-h-screen space-y-6">
-        {/* <FlipWordsDemo /> */}
         <DotBackgroundDemo />
       </div>
 

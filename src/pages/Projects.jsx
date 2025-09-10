@@ -116,10 +116,10 @@ const Projects = () => {
             whileInView="visible"
             viewport={{ once: true, amount: 0.2 }}
           >
-            <h1 className="lg:text-5xl text-2xl md:text-3xl font-light text-white mb-6">
-              Projects
+            <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-6">
+              My Projects
             </h1>
-            <p className="text-lg text-stone-600">
+            <p className="text-lg dark:text-neutral-600">
               A curation of my works across web and mobile development,
               showcasing modern design and cutting-edge technologies.
             </p>
@@ -140,7 +140,7 @@ const Projects = () => {
                   <h3 className="text-white text-3xl font-light mb-3 group-hover:text-gray-300 transition-colors">
                     {project.title}
                   </h3>
-                  <p className="text-stone-600 text-justify text-sm leading-relaxed mb-4">
+                  <p className="dark:text-neutral-600 text-justify text-sm leading-relaxed mb-4">
                     {project.description}
                   </p>
 

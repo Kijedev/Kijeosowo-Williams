@@ -17,7 +17,7 @@ const Certification = () => {
     },
   };
   return (
-    <div className="bg-gradient-to-br from-black via-[#111111] to-black py-24" id="certification">
+    <div className="bg-gradient-to-br from-[#000] via-[#111] to-[#111] py-24" id="certification">
       {/* Certification */}
       <motion.div
         className="pt-10 mb-8 flex flex-col gap-4 text-center"
@@ -26,10 +26,10 @@ const Certification = () => {
         whileInView="visible"
         viewport={{ once: true, amount: 0.2 }}
       >
-        <h1 className="text-white font-light text-2xl lg:text-5xl">
+        <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white">
           Certification
         </h1>
-        <p className="text-sm lg:text-lg text-stone-600">
+        <p className="text-sm lg:text-lg dark:text-neutral-600">
           Credentials and courses i have completed to sharpen my skills as a
           Frontend Developer.
         </p>

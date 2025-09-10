@@ -60,7 +60,7 @@ const Footer = () => {
 
           <div className="flex flex-col gap-5">
             <h1 className="text-3xl font-light">Kije Williams</h1>
-            <p className="text-base text-md text-stone-500 font-light">
+            <p className="text-base text-md dark:text-neutral-600">
               A Certified <strong>Altschool Africa</strong> Frontend Developer
               <br />
               dedicated to creating visually stunning and user-
@@ -75,7 +75,7 @@ const Footer = () => {
 
         {/* Quick Links */}
         <div className="-ml-[50%] lg:ml-0">
-          <p className="text-stone-500 font-light py-5">Quick Links</p>
+          <p className="dark:text-neutral-600 py-5">Quick Links</p>
           <ul className="text-2xl flex flex-col gap-3 font-light">
             <li className="hover:text-stone-500 duration-300 transition-ease">
               <a href="#">About</a>

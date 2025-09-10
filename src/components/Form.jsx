@@ -43,33 +43,33 @@ const Form = () => {
         onSubmit={sendEmail}
         className="w-[50%] lg:w-[100%] mt-[10%]">
         <div>
-          <label className="font-light text-stone-300">Name</label>
+          <label className="text-white font-light">Name</label>
           <br />
           <input
             type="text"
             placeholder="Your Full Name..."
             name="user_name"
-            className="placeholder:text-stone-600 bg-transparent text-stone-400 border border-stone-800 rounded-[10px] lg:p-4 p-3 lg:w-[200%] w-[200%] md:w-[100%] mt-3 outline-none"
+            className="placeholder:text-stone-600 bg-transparent dark:text-neutral-600 border border-stone-800 rounded-[10px] lg:p-4 p-3 lg:w-[200%] w-[200%] md:w-[100%] mt-3 outline-none"
           />
         </div>
         <br />
         <div>
-          <label className="font-light text-stone-300">E-mail</label>
+          <label className="font-light text-white">E-mail</label>
           <br />
           <input
             type="text"
             placeholder="Your E-mail..."
             name="user_email"
-            className="placeholder:text-stone-600 bg-transparent text-stone-400 border border-stone-800 rounded-[10px] lg:p-4 p-3 lg:w-[200%] w-[200%] md:w-[100%] mt-3 outline-none"
+            className="placeholder:text-stone-600 bg-transparent dark:text-neutral-600 border border-stone-800 rounded-[10px] lg:p-4 p-3 lg:w-[200%] w-[200%] md:w-[100%] mt-3 outline-none"
           />
         </div>
         <br />
         <div>
-          <label className="font-light text-stone-300">Message</label>
+          <label className="font-light text-white">Message</label>
           <br />
           <textarea
             name="message"
-            className="placeholder:text-stone-600 bg-transparent text-stone-400 border border-stone-800 rounded-[10px] lg:p-4 p-3 lg:w-[200%] w-[200%] md:w-[100%] h-[15vh] mt-3 outline-none"
+            className="placeholder:text-stone-600 bg-transparent dark:text-neutral-600 border border-stone-800 rounded-[10px] lg:p-4 p-3 lg:w-[200%] w-[200%] md:w-[100%] h-[15vh] mt-3 outline-none"
             placeholder="Talk to me, how can i help you?"></textarea>
         </div>
 

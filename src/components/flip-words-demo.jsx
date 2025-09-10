@@ -21,7 +21,7 @@ export function FlipWordsDemo() {
   const words = ["better", "user-friendly", "beautiful", "modern"];
 
   return (
-    <div className="flex flex-col justify-left">
+    <div className="flex flex-col justify-left px-5 lg:px-0">
       {/* Heading */}
       <motion.div
         className="lg:text-7xl text-5xl text-neutral-500 dark:text-neutral-500"
@@ -38,7 +38,7 @@ export function FlipWordsDemo() {
 
       {/* Paragraph */}
       <motion.p
-        className="text-base lg:text-xl lg:leading-8 text-stone-600 py-8"
+        className="text-base lg:text-xl lg:leading-8 dark:text-neutral-600 py-8"
         variants={popupVariants}
         initial="hidden"
         whileInView="visible"
