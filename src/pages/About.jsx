@@ -4,7 +4,8 @@ import { Link } from "react-router";
 import Download from "../components/Download";
 import { CiLocationOn } from "react-icons/ci";
 import { motion } from "framer-motion";
-import '@fontsource/birthstone';
+import "@fontsource/birthstone";
+import Logo from "../components/Logo";
 // import ToggleTextComponent from "../components/ToggleTextComponent";
 
 const About = () => {
@@ -24,7 +25,7 @@ const About = () => {
       opacity: 1,
       scale: 1,
       y: 0,
-      transition: { duration: 1.5, ease: "easeOut" }
+      transition: { duration: 1.5, ease: "easeOut" },
     },
   };
 
@@ -36,8 +37,9 @@ const About = () => {
       {showContent && (
         <>
           {/* Header */}
-          <header className="px-6 lg:px-24 lg:mt-[-90vh] mt-[-90vh]">
-            <h1 className="text-[5rem] text-white font-light md:text-8xl mt-10 md:mt-20 lg:mt-0 lg:text-[10rem] Birthstone animate-fade-up animate-once animate-delay-[500ms]">
+          <header className="px-6 lg:px-24 lg:mt-[-95vh] mt-[-95vh]">
+            <Logo />
+            <h1 className="text-[5rem] text-white font-light md:text-8xl mt-10 md:mt-20 lg:mt-10 lg:text-[10rem] Birthstone animate-fade-up animate-once animate-delay-[500ms]">
               About
             </h1>
           </header>
@@ -141,9 +143,7 @@ const About = () => {
             </div>
 
             <div className="lg:my-10 my-10 lg:mx-20 mx-5 border-t border-stone-700 py-5">
-              <p className="dark:text-neutral-600 py-3">
-                Frontend Developer
-              </p>
+              <p className="dark:text-neutral-600 py-3">Frontend Developer</p>
               <Link
                 className="lg:text-5xl text-2xl font-[300] flex lg:flex-row flex-col hover:text-stone-500 transition-ease duration-300"
                 title="View Details"

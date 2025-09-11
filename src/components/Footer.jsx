@@ -5,7 +5,6 @@ import { FaTwitter } from "react-icons/fa";
 import { FaGoogleDrive } from "react-icons/fa";
 import { FaWhatsapp } from "react-icons/fa";
 import { Link } from "react-router";
-import { CiLocationOn } from "react-icons/ci";
 import Marquee from "../components/Marquee";
 
 const Footer = () => {
@@ -59,16 +58,13 @@ const Footer = () => {
           </div>
 
           <div className="flex flex-col gap-5">
-            <h1 className="text-3xl font-light">Kije Williams</h1>
+            <h1 className="lg:text-5xl text-3xl font-light Birthstone">Kije Williams</h1>
             <p className="text-base text-md dark:text-neutral-600">
               A Certified <strong>Altschool Africa</strong> Frontend Developer
               <br />
               dedicated to creating visually stunning and user-
               <br />
               friendly web and mobile applications.
-            </p>
-            <p className="text-stone-500 text-lg flex items-center gap-2">
-              <CiLocationOn /> Lagos, Nigeria.
             </p>
           </div>
         </div>
@@ -78,19 +74,19 @@ const Footer = () => {
           <p className="dark:text-neutral-600 py-5">Quick Links</p>
           <ul className="text-2xl flex flex-col gap-3 font-light">
             <li className="hover:text-stone-500 duration-300 transition-ease">
-              <a href="#">About</a>
+              <a href="/about">About</a>
             </li>
             <li className="hover:text-stone-500 duration-300 transition-ease">
-              <a href="#">Articles</a>
+              <a href="#blogpost">Articles</a>
             </li>
             <li className="hover:text-stone-500 duration-300 transition-ease">
-              <a href="#">Projects</a>
+              <a href="/projects">Projects</a>
             </li>
             <li className="hover:text-stone-500 duration-300 transition-ease">
-              <a href="#">Contact</a>
+              <a href="/contact">Contact</a>
             </li>
             <li className="hover:text-stone-500 duration-300 transition-ease">
-              <a href="#" className="flex">
+              <a href="#certification" className="flex">
                 Certification
               </a>
             </li>

@@ -26,7 +26,7 @@ const Contact = () => {
           <img src={kijeLogo} />
         </Link>
       </div>
-      
+
       <div className="lg:flex lg:justify-around lg:items-center lg:ml-20 lg:mt-[-100vh] lg:h-[100vh] -mt-[100vh] md:mt-[-70%] md:ml-[5%] ml-5 mr-5">
         <motion.aside
           className="flex gap-5 mt-20 lg:mt-0"
@@ -36,7 +36,7 @@ const Contact = () => {
           viewport={{ once: true, amount: 0.2 }}
         >
           <div className="flex flex-col">
-            <h1 className="text-[#ECE7E1] py-10 lg:text-[10rem] md:text-[10rem] text-[7rem] animate-fade-up animate-once animate-delay-[500ms] Satisfy">
+            <h1 className="text-[#ECE7E1] lg:text-[12rem] md:text-[10rem] text-[7rem] Birthstone">
               Hello!
             </h1>
             <p className="dark:text-neutral-600 text-lg">

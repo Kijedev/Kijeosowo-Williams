@@ -21,3 +21,4 @@ export function DotBackgroundDemo() {
     </div>
   );
 }
+export default DotBackgroundDemo;
