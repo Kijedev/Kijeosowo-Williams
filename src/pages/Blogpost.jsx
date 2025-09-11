@@ -16,7 +16,10 @@ const Blogpost = () => {
     },
   };
   return (
-    <section id="blogpost" className="bg-gradient-to-br from-[#111] via-[#000] to-black">
+    <section
+      id="blogpost"
+      className="bg-gradient-to-br from-[#111] via-[#000] to-black"
+    >
       <div className="relative overflow-hidden">
         <div className="relative pb-10 py-24">
           <motion.div
@@ -58,7 +61,11 @@ const Blogpost = () => {
             whileInView="visible"
             viewport={{ once: true, amount: 0.2 }}
           >
-            <img
+            <motion.img
+              variants={popupVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.2 }}
               src={CodeSnippet}
               alt="Code Snippet"
               className="lg:w-[50%] rounded-[10px] lg:float-right md:float-right sm:float-none mb-20"

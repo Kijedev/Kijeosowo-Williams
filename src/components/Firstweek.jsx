@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import { ArrowLeft } from "lucide-react";
 import { Link } from "react-router";
 import Week1 from "../Image/Week_1new.png";
@@ -5,8 +6,14 @@ import Footer from "../components/Footer";
 
 const Firstweek = () => {
   return (
-    <div className="bg-gradient-to-br from-[#111] via-[#000] to-black">
-      <article className="prose prose-lg dark:prose-invert mx-auto px-4 py-12 max-w-3xl">
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: -30 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+      className="bg-gradient-to-br from-[#111] via-[#000] to-black"
+    >
+      <article className="prose prose-lg dark:prose-invert mx-auto px-4 py-28 max-w-3xl">
         {/* Breadcrumb */}
         <Link to="/" className="text-white flex gap-3">
           <ArrowLeft className="text-1xl bg-white/20 p-2 rounded-full w-8 h-8 flex items-center justify-center" />
@@ -26,7 +33,7 @@ const Firstweek = () => {
         <img
           src={Week1 || "/placeholder.svg"}
           alt="cover image"
-          className="w-full  transition-transform duration-300"
+          className="w-full rounded-lg transition-transform duration-300"
         />
 
         {/* Article Content */}
@@ -98,16 +105,14 @@ const Firstweek = () => {
 
         {/* Footer Section */}
         <div className="border-t border-white/20 mt-12 pt-6 flex justify-between text-sm text-gray-500">
-          {/* <Link to="/articles/previous" className="hover:text-white/80">
-            ← Previous Article
-          </Link> */}
-          <Link to="/Secondweek" className="hover:text-white/80">
+          <Link to="/secondweek" className="hover:text-white/80">
             Next Article →
           </Link>
         </div>
       </article>
+
       <Footer />
-    </div>
+    </motion.div>
   );
 };
 

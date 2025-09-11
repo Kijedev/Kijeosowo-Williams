@@ -1,6 +1,3 @@
-import { useState, useEffect } from "react";
-// components
-import Preloader from "../components/Preloader";
 import NavbarMenu from "../components/NavbarMenu";
 import Footercta from "../components/Footercta";
 import Footer from "../components/Footer";
@@ -11,17 +8,6 @@ import Blogpost from "../pages/Blogpost";
 import Certification from "../pages/Certification";
 
 const Homepage = () => {
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    const timer = setTimeout(() => setLoading(false), 3000); // 2 seconds
-    return () => clearTimeout(timer);
-  }, []);
-
-  if (loading) {
-    return <Preloader />;
-  }
-
   return (
     <section className="bg-gradient-to-br from-black via-[#111] to-black min-h-screen overflow-hidden">
       {/* Navbar */}
@@ -49,4 +35,5 @@ const Homepage = () => {
     </section>
   );
 };
+
 export default Homepage;
