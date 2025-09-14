@@ -75,7 +75,7 @@ const projects = [
     github: "https://github.com/Kijeosowo/Unsplash",
   },
   {
-    id: 6,
+    id: 7,
     type: "mobile",
     image: Unsplash,
     title: "Unsplash Clone (mobile)",
@@ -86,7 +86,7 @@ const projects = [
     github: "https://github.com/Kijeosowo/Unsplash",
   },
   {
-    id: 6,
+    id: 8,
     type: "mobile",
     image: grocerly,
     title: "Grocerly",
