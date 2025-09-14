@@ -14,7 +14,7 @@ const Footer = () => {
       <div className="flex flex-col lg:flex-row justify-between items-center lg:py-10 py-10 lg:px-20 pr-10">
         {/* Icons */}
         <div className="flex flex-col-reverse lg:flex-row gap-10 items-center lg:ml-10 lg:mr-10">
-          <div className="flex lg:flex-col text-[1.2rem] gap-5 lg:justify-start justify-left lg:mt-0 text-white -ml-[50%] lg:ml-0">
+          <div className="flex lg:flex-col text-[1.2rem] gap-5 lg:justify-start justify-left lg:mt-0 text-white -ml-[35%] lg:ml-0">
             <Link
               to="https://www.linkedin.com/in/williams-kijeosowo-237749224/"
               className="hover:text-stone-600 transition-colors duration-500"
@@ -57,7 +57,7 @@ const Footer = () => {
             </Link>
           </div>
 
-          <div className="flex flex-col gap-5">
+          <div className="flex flex-col gap-5 ml-5 lg:ml-0">
             <h1 className="lg:text-5xl text-3xl font-light Birthstone">Kije Williams</h1>
             <p className="text-base text-md dark:text-neutral-600">
               A Certified <strong>Altschool Africa</strong> Frontend Developer
