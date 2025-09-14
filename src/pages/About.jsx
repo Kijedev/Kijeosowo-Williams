@@ -128,31 +128,80 @@ const About = () => {
               Work History
             </h1>
             <div className="lg:my-10 my-10 lg:mx-20 mx-5 border-t border-stone-700 py-5">
-              <p className="dark:text-neutral-600 py-3">
-                Junior Developer Intern
+              <h1 className="lg:text-3xl text-2xl font-[300] flex lg:flex-row lg:gap-0 flex-col hover:text-stone-500 transition-ease duration-300">
+                WebInfluencers (United Arab Emirates ) - June 2025 - Present
+              </h1>
+              <p className="dark:text-neutral-500 py-3">
+                Junior Developer (Remote)
               </p>
-              <Link
-                className="lg:text-5xl text-2xl font-[300] flex lg:flex-row lg:gap-0 flex-col hover:text-stone-500 transition-ease duration-300"
-                title="View Details"
-              >
-                WebInfluencers (Remote) -{" "}
-                <p className="flex">
-                  <CiLocationOn className="lg:flex hidden" /> UAE ( Dubai )
-                </p>
-              </Link>
+              <p className="dark:text-neutral-500 py-3 bg-white/5 p-5 rounded">
+                I collaborated with a Senior Developer to build Imo Talent Hub,
+                a React.js web application for the Imo State Government that
+                serves over 100,000 users seeking tech skills, and also
+                contributed to the development of the FindExperts web
+                application using React.js. I worked on the Eye on Imo website,
+                an investment performance platform that helps the citizens of
+                Imo State make informed investment decisions. In addition, I
+                managed and updated all Techsoma Blog websites (techsoma.me,
+                techsoma.africa, techsoma.ca) with WordPress, which drove a 15%
+                increase in monthly traffic through consistent updates and
+                optimizations. I designed and developed the FindBlack Experts
+                website with WordPress and Elementor, creating a fully
+                responsive and SEO-friendly platform that improved search
+                rankings, and also built a custom WordPress template from
+                scratch for the redesigned Techsoma websites, enhancing site
+                speed by 25% while delivering a cohesive brand experience.
+                Furthermore, I maintained and optimized a client’s WordPress
+                e-commerce store (Afromaya), resulting in an 8% improvement in
+                page load time and higher sales conversions.
+              </p>
             </div>
 
             <div className="lg:my-10 my-10 lg:mx-20 mx-5 border-t border-stone-700 py-5">
-              <p className="dark:text-neutral-600 py-3">Frontend Developer</p>
-              <Link
-                className="lg:text-5xl text-2xl font-[300] flex lg:flex-row flex-col hover:text-stone-500 transition-ease duration-300"
-                title="View Details"
-              >
-                Taoltech (Remote) -{" "}
-                <p className="flex">
-                  <CiLocationOn className="lg:flex hidden" /> Lagos, Nigeria
-                </p>
-              </Link>
+              <h1 className="lg:text-3xl text-2xl font-[300] flex lg:flex-row flex-col hover:text-stone-500 transition-ease duration-300">
+                Postivus (Lagos, Nigeria) - Feb 2025
+              </h1>
+              <p className="dark:text-neutral-500 py-3">
+                Frontend Developer (Contract)
+              </p>
+              <p className="dark:text-neutral-500 py-3 bg-white/5 p-5 rounded">
+                I developed a frontend web application for a digital agency
+                serving 15+ clients, automating workflows for SEO, PPC, and
+                content services, which significantly improved operational
+                efficiency. I designed a responsive UI using React.js and
+                Tailwind CSS, boosting mobile engagement, and optimized
+                performance to reduce page load time by 15%, driving an increase
+                in inorganic traffic. I also built reusable and scalable
+                components following solid design principles, cutting down
+                future development time, and ensured cross-browser and
+                cross-device compatibility, which reduced UI-related support
+                tickets. Additionally, I executed over 50 unit and integration
+                tests, resolving 90% of bugs pre-launch and ensuring a smooth,
+                stable production rollout.
+              </p>
+            </div>
+
+            <div className="lg:my-10 my-10 lg:mx-20 mx-5 border-t border-stone-700 py-5">
+              <h1 className="lg:text-3xl text-2xl font-[300] flex lg:flex-row flex-col hover:text-stone-500 transition-ease duration-300">
+                Taoltech (Lagos, Nigeria) - Aug 2023 - Dec 2024
+              </h1>
+              <p className="dark:text-neutral-500 py-3">
+                Frontend Developer (Remote)
+              </p>
+              <p className="dark:text-neutral-500 py-3 bg-white/5 p-5 rounded">
+                I helped develop a secure Electronic Medical Record (EMR) system
+                used by 100+ healthcare professionals across 20+ clinics,
+                improving patient data access and workflow efficiency. I built a
+                compliant and accessible UI in React.js that streamlined doctor
+                workflows and reduced form errors, while applying performance
+                best practices that cut page load times by half. I also
+                delivered interactive features such as patient search and record
+                filters, boosting task efficiency by 50%. To ensure reliability,
+                I conducted cross-browser testing and resolved UI/UX
+                inconsistencies. Working closely with cross-functional teams, we
+                launched the system ahead of schedule and fully met client
+                requirements.
+              </p>
             </div>
           </div>
 

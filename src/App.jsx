@@ -5,6 +5,10 @@ import NavbarMenu from "./components/NavbarMenu";
 import Homepage from "./components/Homepage";
 import Firstweek from "./components/Firstweek";
 import Secondweek from "./components/Secondweek";
+import Thirdweek from "./components/Thirdweek";
+import Fourthweek from "./components/Fourthweek";
+import Fifthweek from "./components/Fifthweek";
+import Sixthweek from "./components/Sixthweek";
 import ScrollToTop from "./components/ScrollToTop";
 // pages
 import About from "./pages/About";
@@ -27,8 +31,13 @@ function App() {
         <Route path="/projects" element={<Projects />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/certification" element={<Certification />} />
+        {/* Blog pages */}
         <Route path="/firstweek" element={<Firstweek />} />
         <Route path="/secondweek" element={<Secondweek />} />
+        <Route path="/thirdweek" element={<Thirdweek />} />
+        <Route path="/fourthweek" element={<Fourthweek />} />
+        <Route path="/fifthweek" element={<Fifthweek />} />
+        <Route path="/sixthweek" element={<Sixthweek />} />
       </Routes>
     </>
   );
