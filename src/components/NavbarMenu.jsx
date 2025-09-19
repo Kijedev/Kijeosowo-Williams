@@ -9,29 +9,29 @@ import { RiContactsBook3Line } from "react-icons/ri";
 import { LiaCertificateSolid } from "react-icons/lia";
 
 const navItems = [
-  { name: "About", path: "/about", hash: "#about", icon: <CiUser /> },
+  { name: "About", path: "/about", scrollId: null, icon: <CiUser /> },
   {
     name: "Articles",
     path: "/articles",
-    hash: "#blogpost",
+    scrollId: "blogpost", // id of the section in DOM
     icon: <IoBookOutline />,
   },
   {
     name: "Projects",
     path: "/projects",
-    hash: "#projects",
+    scrollId: "projects", 
     icon: <LuCodeXml />,
   },
   {
     name: "Contact",
     path: "/contact",
-    hash: "#contact",
+    scrollId: null,
     icon: <RiContactsBook3Line />,
   },
   {
     name: "Certification",
     path: "/certification",
-    hash: "#certification",
+    scrollId: "certification",
     icon: <LiaCertificateSolid />,
   },
 ];
@@ -46,6 +46,13 @@ const NavbarMenu = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+  const handleScroll = (id) => {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <div className="flex justify-between lg:px-28 items-center px-6 py-6 backdrop-blur-lg fixed top-0 left-0 right-0 z-50">
       <Logo />
@@ -59,13 +66,13 @@ const NavbarMenu = () => {
               className="flex items-center gap-2 hover:text-stone-400 transition-colors duration-500"
             >
               <p>{item.icon}</p>
-              {isDesktop ? (
-                <a
-                  href={item.hash}
+              {isDesktop && item.scrollId ? (
+                <button
+                  onClick={() => handleScroll(item.scrollId)}
                   className="hover:text-stone-400 text-white transition-colors duration-500"
                 >
                   {item.name}
-                </a>
+                </button>
               ) : (
                 <Link
                   to={item.path}
