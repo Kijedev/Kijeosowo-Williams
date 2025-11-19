@@ -3,19 +3,31 @@ import { motion } from "framer-motion";
 import WebInfluencers from "../Image/WebInfluencers.png";
 import Imotalenthub from "../Image/imotalenthub.png";
 import Eyeonimo from "../Image/eyeonimo.png";
-import Techsomame from "../Image/techsomame.png";
+import Techsoma from "../Image/techsomaafrica.png";
 import Positivus from "../Image/positivus.png";
 import Unsplash from "../Image/Unsplash.png";
 import grocerly from "../Image/grocerly1.png";
+import AiTeacha from "../Image/aiteacha.png";
 
 const projects = [
+  {
+    id: 1,
+    type: "web",
+    image: AiTeacha,
+    title: "AiTeacha",
+    description:
+      "Built with all AI tools to aid teachers day-to-day tasks to improve students outcome",
+    techStack: ["React.js", "TailwindCSS", "Framer Motion"],
+    link: "https://www.aiteacha.com/",
+    github: "https://github.com/Kijeosowo",
+  },
   {
     id: 1,
     type: "web",
     image: WebInfluencers,
     title: "WebInfluencers",
     description:
-      "From strategic communications and AI innovation to talent platforms and media publishing...",
+      "From strategic communications and AI innovation to talent platforms and media publishing",
     techStack: ["Next.js", "TailwindCSS", "Framer Motion"],
     link: "https://www.webinfluencers.org/",
     github: "https://github.com/Kijeosowo",
@@ -38,18 +50,18 @@ const projects = [
     description:
       "Nigeria's Premier Investment Destination in the Heart of the Eastern Region",
     techStack: ["Next.js", "Sanity.io", "TailwindCSS"],
-    link: "https://www.imotalenthub.com/",
+    link: "https://www.eyeonimo.com/",
     github: "https://github.com/Kijeosowo",
   },
   {
     id: 4,
     type: "web",
-    image: Techsomame,
-    title: "Techsoma: Middle East",
+    image: Techsoma,
+    title: "Techsoma Africa",
     description:
-      "Your premier destination for insights on the Middle East’s growing tech landscape.",
+      "Your ultimate source for insights on Africa’s thriving tech ecosystem. Explore transformative startups, innovative solutions, and the latest developments shaping the continent’s economic future.",
     techStack: ["Wordpress", "Elementor", "JNews"],
-    link: "https://www.imotalenthub.com/",
+    link: "https://www.techsoma.africa/",
     github: "https://github.com/Kijeosowo",
   },
   {
@@ -263,17 +275,17 @@ const Projects = () => {
                     alt={project.title}
                     className="mb-4 rounded-lg"
                   />
-                  <h3 className="text-white text-3xl font-light mb-3 group-hover:text-gray-300 transition-colors">
+                  <h3 className="text-white text-3xl font-light mb-1 group-hover:text-gray-300 transition-colors">
                     {project.title}
                   </h3>
-                  <p className="dark:text-neutral-600 text-justify text-sm leading-relaxed mb-4">
+                  <p className="dark:text-neutral-500 text-justify text-sm leading-relaxed mb-2">
                     {project.description}
                   </p>
                   <div className="flex flex-wrap gap-2 mb-4">
                     {project.techStack.map((tech, index) => (
                       <span
                         key={index}
-                        className="px-4 py-2 bg-black/20 dark:text-neutral-500 text-xs rounded-md"
+                        className="px-4 py-2 bg-black/20 dark:text-neutral-500 text-xs rounded-md border dark:border-neutral-800"
                       >
                         {tech}
                       </span>
@@ -299,7 +311,7 @@ const Projects = () => {
                       href={project.link}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="px-4 py-2 bg-black/40 dark:text-neutral-500 hover:bg-black/70 rounded text-sm"
+                      className="px-4 py-2 dark:text-white hover:text-neutral-400 rounded text-sm border dark:border-neutral-800"
                     >
                       View Project
                     </a>
