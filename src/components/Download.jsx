@@ -20,10 +20,10 @@ const Download = () => {
   return (
     <div className="rounded-[5px] py-2 px-10 lg:mx-20 mx-5 my-5 inline-flex justify-center items-center bg-white text-black hover:bg-[#ECE7E1] transition-colors duration-300 group">
       <a
-        href="/KIJEOSOWO_WILLIAMS.pdf"
-        download="Kijeosowo Williams.pdf"
+        href="/KIJEOSOWO WILLIAMS.docx"
+        download="Kijeosowo Williams.docx"
         className="inline-flex">
-        Download cv{" "}
+        Download my cv{" "}
         <AiOutlineCloudDownload className="mt-1 ml-2 group-hover:animate-bounce" />
       </a>
     </div>

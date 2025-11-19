@@ -54,14 +54,14 @@ const Certification = () => {
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
         >
-          <a
+          {/* <a
             href={Pdfcertificate}
             download
             className="text-white border border-stone-700 rounded-lg py-3 px-10 flex gap-2 group"
           >
             Download{" "}
             <DownloadCloud className="mt-2 h-3 w-3 group-hover:animate-bounce" />
-          </a>
+          </a> */}
         </motion.div>
       </div>
     </div>

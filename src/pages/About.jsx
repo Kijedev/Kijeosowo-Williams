@@ -129,6 +129,39 @@ const About = () => {
             </h1>
             <div className="lg:my-10 my-10 lg:mx-20 mx-5 border-t border-stone-700 py-5">
               <h1 className="lg:text-3xl text-2xl font-[300] flex lg:flex-row lg:gap-0 flex-col hover:text-stone-500 transition-ease duration-300">
+                AiTeacha (Lagos, Nigeria ) - Oct 2025 - Nov 2025
+              </h1>
+              <p className="dark:text-neutral-500 py-3">
+                Frontend Engineer (On-Site)
+              </p>
+              <p className="dark:text-neutral-500 py-3 bg-white/5 p-5 rounded">
+                I helped with the redesign of the AiTeacha learning platform,
+                transforming an outdated interface into a high-performance,
+                responsive web app that improved user retention by 35 percent
+                and reduced navigation time by 40 percent. I designed and
+                implemented major product interfaces including the homepage,
+                teacher dashboard, student dashboard, and AI tools using
+                React.js, TypeScript, and Tailwind CSS, and collaborated with
+                backend engineers to integrate RESTful APIs for classroom
+                operations such as automated pre test generation and progress
+                tracking. I rebuilt the tools page architecture to improve
+                scalability and UI and UX, cutting load time by 50 percent and
+                boosting user efficiency, and partnered with designers to
+                convert Figma prototypes into pixel perfect, reusable React
+                components with responsive layouts and accessibility in mind. I
+                also optimized frontend performance with efficient state
+                management, code splitting, and lazy loading, reducing page load
+                times by 30 percent. Throughout the project I participated in
+                agile sprint planning, code reviews, and testing to maintain
+                product quality and ensure timely delivery. The upgraded
+                platform was delivered ahead of schedule, supporting a strong
+                internal demo and beta rollout, and the work leveraged React.js,
+                TypeScript, Tailwind CSS, Axios, and Git and GitHub.
+              </p>
+            </div>
+
+            <div className="lg:my-10 my-10 lg:mx-20 mx-5 border-t border-stone-700 py-5">
+              <h1 className="lg:text-3xl text-2xl font-[300] flex lg:flex-row lg:gap-0 flex-col hover:text-stone-500 transition-ease duration-300">
                 WebInfluencers (United Arab Emirates ) - June 2025 - Present
               </h1>
               <p className="dark:text-neutral-500 py-3">
