@@ -6,11 +6,11 @@ import DotBackgroundDemo from "../components/DotBackgroundDemo";
 import Projects from "../pages/Projects";
 import Blogpost from "../pages/Blogpost";
 import Certification from "../pages/Certification";
-
+import CardDemo from "../components/CardDemo";
 
 const Homepage = () => {
   return (
-    <section className="bg-gradient-to-br from-black via-[#111] to-black min-h-screen overflow-hidden">
+    <section className="bg-black min-h-screen overflow-hidden">
       {/* Navbar */}
       <NavbarMenu />
 
@@ -21,6 +21,8 @@ const Homepage = () => {
 
       {/* Projects */}
       <Projects />
+
+      <CardDemo />
 
       {/* Articles */}
       {/* <Blogpost /> */}

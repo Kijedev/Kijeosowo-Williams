@@ -54,68 +54,58 @@ const NavbarMenu = () => {
   };
 
   return (
-    <div className="flex justify-between lg:px-28 items-center px-6 py-6 backdrop-blur-lg fixed top-0 left-0 right-0 z-50">
-      <Logo />
-
-      {/* Desktop Menu */}
-      <nav className="hidden md:block">
-        <ul className="text-white/50 text-[1rem] flex gap-5 font-light">
-          {navItems.map((item) => (
-            <li
-              key={item.name}
-              className="flex items-center gap-2 hover:text-stone-400 transition-colors duration-500"
-            >
-              <p>{item.icon}</p>
-              <Link
-                to={item.path}
-                className="hover:text-stone-400 text-white transition-colors duration-500"
-              >
-                {item.name}
-              </Link>
-              {/* <button
-                onClick={() => handleScroll(item.scrollId)}
-                className="hover:text-stone-400 text-white transition-colors duration-500"
-              >
-                {item.name}
-              </button> */}
-              {/* {isDesktop && item.scrollId ? (
-                
-              ) : (
-                <Link
-                  to={item.path}
-                  className="hover:text-stone-400 text-white transition-colors duration-500"
-                >
-                  {item.name}
-                </Link>
-              )} */}
-            </li>
-          ))}
-        </ul>
-      </nav>
-
-      {/* Mobile Menu Button */}
-      <button
-        className="md:hidden text-white text-3xl"
-        onClick={() => setMenuOpen(!menuOpen)}
+    <div className="fixed top-0 left-0 right-0 z-50">
+      <div
+        className="
+      mx-auto
+      mt-4
+      max-w-6xl
+      px-6 py-6
+      flex items-center justify-between
+      rounded-full
+      backdrop-blur-sm
+    
+border border-white/15
+shadow-lg shadow-black/20
+    "
       >
-        {menuOpen ? <FiX /> : <FiMenu />}
-      </button>
+        <Logo />
+
+        {/* Desktop Menu */}
+        <nav className="hidden md:block">
+          <ul className="text-white/70 text-[1rem] flex gap-6 font-light">
+            {navItems.map((item) => (
+              <li
+                key={item.name}
+                className="flex items-center gap-2 hover:text-white transition-colors duration-300"
+              >
+                <span className="text-lg">{item.icon}</span>
+                <Link to={item.path}>{item.name}</Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
+
+        {/* Mobile Menu Button */}
+        <button
+          className="md:hidden text-white text-3xl"
+          onClick={() => setMenuOpen(!menuOpen)}
+        >
+          {menuOpen ? <FiX /> : <FiMenu />}
+        </button>
+      </div>
 
       {/* Mobile Dropdown */}
       {menuOpen && (
-        <div className="absolute top-16 right-6 bg-black/90 backdrop-blur-lg rounded-lg shadow-lg p-6 md:hidden">
+        <div className="absolute top-[90px] left-1/2 -translate-x-1/2 w-[90%] max-w-sm bg-black/70 backdrop-blur-xl rounded-2xl shadow-lg p-6 md:hidden">
           <ul className="flex flex-col gap-4 text-white text-lg">
             {navItems.map((item) => (
               <li
                 key={item.name}
-                className="flex items-center gap-2 hover:text-stone-400 transition-colors duration-500"
+                className="flex items-center gap-2 hover:text-stone-300 transition"
               >
-                <p>{item.icon}</p>
-                <Link
-                  to={item.path}
-                  className="hover:text-stone-400 transition-colors duration-500"
-                  onClick={() => setMenuOpen(false)}
-                >
+                <span>{item.icon}</span>
+                <Link to={item.path} onClick={() => setMenuOpen(false)}>
                   {item.name}
                 </Link>
               </li>
