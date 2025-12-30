@@ -7,6 +7,7 @@ import Projects from "../pages/Projects";
 import Blogpost from "../pages/Blogpost";
 import Certification from "../pages/Certification";
 
+
 const Homepage = () => {
   return (
     <section className="bg-gradient-to-br from-black via-[#111] to-black min-h-screen overflow-hidden">
@@ -22,7 +23,7 @@ const Homepage = () => {
       <Projects />
 
       {/* Articles */}
-      <Blogpost />
+      {/* <Blogpost /> */}
 
       {/* Certification */}
       <Certification />

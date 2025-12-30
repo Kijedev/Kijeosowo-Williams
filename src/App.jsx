@@ -17,10 +17,12 @@ import Contact from "./pages/Contact";
 import Blogpost from "./pages/Blogpost";
 import Certification from "./pages/Certification";
 import Articlespage from "./pages/Articlespage";
+import CustomCursor from "./components/CustomCursor";
 
 function App() {
   return (
     <>
+      <CustomCursor />
       <ScrollToTop />
       <NavbarMenu />
       <Routes>

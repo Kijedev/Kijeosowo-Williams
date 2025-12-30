@@ -24,7 +24,7 @@ const CustomCursor = () => {
         const currentX = parseFloat(cursorRef.current.style.left || 0);
         const currentY = parseFloat(cursorRef.current.style.top || 0);
 
-        const nextX = currentX + (targetPosition.x - currentX) * 0.1; // Lerp factor (adjust for smoothness)
+        const nextX = currentX + (targetPosition.x - currentX) * 0.1;
         const nextY = currentY + (targetPosition.y - currentY) * 0.1;
 
         cursorRef.current.style.left = `${nextX}px`;
@@ -40,7 +40,7 @@ const CustomCursor = () => {
   return (
     <div
       ref={cursorRef}
-      className="fixed w-20 h-20 border border-stone-600 rounded-full pointer-events-none transform -translate-x-1/2 -translate-y-1/2 transition-transform duration-100"
+      className="z-[999] fixed w-10 h-10 border border-stone-600 rounded-full pointer-events-none transform -translate-x-1/2 -translate-y-1/2 transition-transform duration-100"
       style={{
         left: "0px",
         top: "0px",

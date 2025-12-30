@@ -59,7 +59,7 @@ const Contact = () => {
           </div>
         </motion.aside>
 
-        <aside>
+        <aside className="lg:mt-0 -mt-16">
           <Form />
         </aside>
         <br />

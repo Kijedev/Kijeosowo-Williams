@@ -10,16 +10,16 @@ import { LiaCertificateSolid } from "react-icons/lia";
 
 const navItems = [
   { name: "About", path: "/about", scrollId: null, icon: <CiUser /> },
-  {
-    name: "Articles",
-    path: "/articles",
-    scrollId: "blogpost", // id of the section in DOM
-    icon: <IoBookOutline />,
-  },
+  // {
+  //   name: "Articles",
+  //   path: "/articles",
+  //   scrollId: "blogpost",
+  //   icon: <IoBookOutline />,
+  // },
   {
     name: "Projects",
     path: "/projects",
-    scrollId: "projects", 
+    scrollId: "projects",
     icon: <LuCodeXml />,
   },
   {
@@ -66,13 +66,20 @@ const NavbarMenu = () => {
               className="flex items-center gap-2 hover:text-stone-400 transition-colors duration-500"
             >
               <p>{item.icon}</p>
-              {isDesktop && item.scrollId ? (
-                <button
-                  onClick={() => handleScroll(item.scrollId)}
-                  className="hover:text-stone-400 text-white transition-colors duration-500"
-                >
-                  {item.name}
-                </button>
+              <Link
+                to={item.path}
+                className="hover:text-stone-400 text-white transition-colors duration-500"
+              >
+                {item.name}
+              </Link>
+              {/* <button
+                onClick={() => handleScroll(item.scrollId)}
+                className="hover:text-stone-400 text-white transition-colors duration-500"
+              >
+                {item.name}
+              </button> */}
+              {/* {isDesktop && item.scrollId ? (
+                
               ) : (
                 <Link
                   to={item.path}
@@ -80,7 +87,7 @@ const NavbarMenu = () => {
                 >
                   {item.name}
                 </Link>
-              )}
+              )} */}
             </li>
           ))}
         </ul>

@@ -4,7 +4,7 @@ import { Link } from "react-router";
 import { ArrowRight } from "lucide-react";
 import Icons from "../components/Icons";
 import { motion } from "framer-motion";
-import '@fontsource/birthstone';
+import "@fontsource/birthstone";
 
 // Animation variants
 const popupVariants = {
@@ -13,18 +13,18 @@ const popupVariants = {
     opacity: 1,
     scale: 1,
     y: 0,
-    transition: { type: "spring", stiffness: 80, damping: 15 }
+    transition: { type: "spring", stiffness: 80, damping: 15 },
   },
 };
 
 export function FlipWordsDemo() {
-  const words = ["better", "user-friendly", "beautiful", "modern"];
+  const words = ["better", "beautiful", "modern"];
 
   return (
     <div className="flex flex-col justify-left px-5 lg:px-0">
       {/* Heading */}
       <motion.div
-        className="lg:text-7xl text-5xl text-neutral-500 dark:text-neutral-500"
+        className="lg:text-7xl text-5xl text-neutral-500 dark:text-neutral-500 text-center"
         variants={popupVariants}
         initial="hidden"
         whileInView="visible"
@@ -38,19 +38,20 @@ export function FlipWordsDemo() {
 
       {/* Paragraph */}
       <motion.p
-        className="text-base lg:text-xl lg:leading-8 dark:text-neutral-600 py-8"
+        className="text-base lg:text-xl lg:leading-8 dark:text-neutral-600 py-8 max-w-2xl text-center"
         variants={popupVariants}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.2 }}
       >
         A Certified <strong>Altschool Africa</strong> Frontend Developer
-        dedicated to creating visually stunning and <br /> user- friendly web
-        and mobile applications.
+        dedicated to creating visually stunning and user- friendly web and
+        mobile applications.
       </motion.p>
 
       {/* Links / Icon */}
       <motion.div
+        className="flex flex-col justify-center items-center"
         variants={popupVariants}
         initial="hidden"
         whileInView="visible"
