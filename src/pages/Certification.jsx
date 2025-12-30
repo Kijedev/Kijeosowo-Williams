@@ -8,7 +8,7 @@ const Certification = () => {
   const [selectedImageIndex, setSelectedImageIndex] = useState(null);
 
   const popupVariants = {
-    hidden: { opacity: 0, scale: 0.8, y: 40 },
+    hidden: { opacity: 0, scale: 0.9, y: 40 },
     visible: {
       opacity: 1,
       scale: 1,
@@ -16,39 +16,53 @@ const Certification = () => {
       transition: { type: "spring", stiffness: 80, damping: 15 },
     },
   };
-  return (
-    <div className="bg-gradient-to-br from-[#000] via-[#111] to-[#111] py-24 lg:h-screen md:h-screen h-[100vh]" id="certification">
-      {/* Certification */}
-      <motion.div
-        className="pt-10 mb-8 flex flex-col gap-4 text-center"
-        variants={popupVariants}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.2 }}
-      >
-        <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white">
-          Certification
-        </h1>
-        <p className="text-sm lg:text-lg dark:text-neutral-600">
-          Credentials and courses i have completed to sharpen my skills as a
-          Frontend Developer.
-        </p>
-      </motion.div>
 
-      {/* Image */}
-      <div className="flex flex-col justify-center items-center">
-        <motion.img
-          src={Certificate}
-          alt="certificate"
-          className="rounded-[10px] lg:w-[40%] lg:h-[40%] px-10 lg:px-0"
+  return (
+    <section
+      id="certification"
+      className="bg-gradient-to-br from-black via-[#111] to-[#111]
+                 py-16 sm:py-20 lg:py-24"
+    >
+      {/* Container */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        {/* Header */}
+        <motion.div
+          className="mb-10 text-center space-y-3"
           variants={popupVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.2 }}
-        />
-        {/* Download button */}
+          viewport={{ once: true, amount: 0.3 }}
+        >
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white">
+            Certification
+          </h1>
+          <p className="max-w-2xl mx-auto text-sm sm:text-base lg:text-lg text-neutral-400">
+            Credentials and courses I have completed to sharpen my skills as a
+            Frontend Developer.
+          </p>
+        </motion.div>
+
+        {/* Certificate Image */}
+        <div className="flex justify-center">
+          <motion.img
+            src={Certificate}
+            alt="certificate"
+            className="
+              w-full
+              max-w-md sm:max-w-lg lg:max-w-xl
+              rounded-xl
+              shadow-lg
+            "
+            variants={popupVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+          />
+        </div>
+
       </div>
-    </div>
+    </section>
   );
 };
 
