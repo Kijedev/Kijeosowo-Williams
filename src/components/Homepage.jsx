@@ -7,6 +7,7 @@ import Projects from "../pages/Projects";
 import Blogpost from "../pages/Blogpost";
 import Certification from "../pages/Certification";
 import CardDemo from "../components/CardDemo";
+import TimelineDemo from "../components/TimelineDemo";
 
 const Homepage = () => {
   return (
@@ -21,6 +22,7 @@ const Homepage = () => {
 
       {/* Projects */}
       <Projects />
+      <TimelineDemo />
 
       <CardDemo />
 
