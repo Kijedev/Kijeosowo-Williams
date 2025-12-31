@@ -25,14 +25,14 @@ const Icons = () => {
       >
         <FaGithub />
       </Link>
-      <Link
+      {/* <Link
         to="https://docs.google.com/document/d/1jD5IhwyadOyXQYBmC6Vg6MtcJY50buqClqaBotXe9zQ/edit?usp=sharing"
         className="hover:text-stone-600 transition-colors duration-500"
         title="Google Drive"
         target="_blank"
       >
         <FaGoogleDrive />
-      </Link>
+      </Link> */}
       <Link
         to="https://x.com/Kijeosowo1"
         className="hover:text-stone-600 transition-colors duration-500"

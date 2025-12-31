@@ -7,6 +7,7 @@ import { RiTailwindCssFill } from "react-icons/ri";
 import { DiJavascript1 } from "react-icons/di";
 import { TbBrandTypescript } from "react-icons/tb";
 import { DiDjango } from "react-icons/di";
+import { RiNextjsFill } from "react-icons/ri";
 
 export function CardDemo() {
   return (
@@ -75,7 +76,7 @@ const Skeleton = () => {
   }, []);
   return (
     <div className="p-8 overflow-hidden h-full relative flex items-center justify-center bg-black/70">
-      <div className="flex flex-row shrink-0 justify-center items-center gap-2">
+      <div className="flex lg:flex-row shrink-0 justify-center items-center gap-2">
         <Container className="h-16 w-16 circle-1">
           <RiTailwindCssFill className="h-6 w-6 dark:text-white" />
         </Container>
@@ -89,7 +90,7 @@ const Skeleton = () => {
           <TbBrandTypescript className="h-8 w-8 text-white" />
         </Container>
         <Container className="h-16 w-16 circle-5">
-          <DiDjango className="h-8 w-8 text-white" />
+          <RiNextjsFill className="h-8 w-8 text-white" />
         </Container>
       </div>
       <div className="h-40 w-px absolute top-20 m-auto z-40 bg-gradient-to-b from-transparent via-cyan-500 to-transparent animate-move">
@@ -146,7 +147,7 @@ export const CardTitle = ({ children, className }) => {
   return (
     <h3
       className={cn(
-        "text-6xl text-center font-semibold text-gray-800 dark:text-white py-2",
+        "lg:text-6xl text-4xl text-center font-semibold text-gray-800 dark:text-white py-2",
         className
       )}
     >
@@ -159,7 +160,7 @@ export const CardDescription = ({ children, className }) => {
   return (
     <p
       className={cn(
-        "text-lg pt-2 text-center font-normal text-neutral-600 dark:text-neutral-400",
+        "lg:text-lg text-md pt-2 text-center font-normal text-neutral-600 dark:text-neutral-400",
         className
       )}
     >

@@ -38,7 +38,6 @@ const About = () => {
         <>
           {/* Header */}
           <header className="px-6 lg:px-24 lg:mt-[-95vh] mt-[-95vh]">
-            <Logo />
             <h1 className="text-[5rem] text-white font-light md:text-8xl mt-10 md:mt-20 lg:mt-10 lg:text-[10rem] Birthstone animate-fade-up animate-once animate-delay-[500ms]">
               About
             </h1>

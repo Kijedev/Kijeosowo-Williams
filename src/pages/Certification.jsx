@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Certificate from "../Image/certificate.png";
-import Pdfcertificate from "../Image/certificate.pdf";
+// import Pdfcertificate from "../Image/certificate.pdf";
 import { DownloadCloud } from "lucide-react";
 import { motion } from "framer-motion";
 

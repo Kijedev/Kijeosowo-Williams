@@ -66,10 +66,10 @@ export function FlipWordsDemo() {
       {/* Button */}
       <motion.div variants={itemVariants} className="flex justify-center">
         <Link
-          to="/projects"
+          to="/about"
           className="inline-flex items-center gap-2 px-10 py-3 bg-white text-black rounded hover:bg-[#ECE7E1] transition-colors duration-300 group"
         >
-          View Projects
+          View Resumé
           <ArrowRight className="w-3 h-3 group-hover:animate-bounce" />
         </Link>
       </motion.div>

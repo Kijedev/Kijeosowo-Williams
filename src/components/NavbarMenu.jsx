@@ -23,16 +23,16 @@ const navItems = [
     icon: <LuCodeXml />,
   },
   {
-    name: "Contact",
-    path: "/contact",
-    scrollId: null,
-    icon: <RiContactsBook3Line />,
-  },
-  {
     name: "Certification",
     path: "/certification",
     scrollId: "certification",
     icon: <LiaCertificateSolid />,
+  },
+  {
+    name: "Contact",
+    path: "/contact",
+    scrollId: null,
+    icon: <RiContactsBook3Line />,
   },
 ];
 

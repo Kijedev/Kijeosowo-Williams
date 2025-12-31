@@ -21,7 +21,7 @@ const Homepage = () => {
       </div>
 
       {/* Projects */}
-      <Projects />
+      {/* <Projects /> */}
       <TimelineDemo />
 
       <CardDemo />
