@@ -1,13 +1,11 @@
 import NavbarMenu from "../components/NavbarMenu";
 import Footercta from "../components/Footercta";
 import Footer from "../components/Footer";
-import DotBackgroundDemo from "../components/DotBackgroundDemo";
+import DotBackgroundDemo from "./ui/DotBackgroundDemo";
 // pages
-import Projects from "../pages/Projects";
-import Blogpost from "../pages/Blogpost";
 import Certification from "../pages/Certification";
-import CardDemo from "../components/CardDemo";
-import TimelineDemo from "../components/TimelineDemo";
+import CardDemo from "../components/ui/CardDemo";
+import TimelineDemo from "../components/ui/TimelineDemo";
 
 const Homepage = () => {
   return (
@@ -21,13 +19,9 @@ const Homepage = () => {
       </div>
 
       {/* Projects */}
-      {/* <Projects /> */}
       <TimelineDemo />
 
       <CardDemo />
-
-      {/* Articles */}
-      {/* <Blogpost /> */}
 
       {/* Certification */}
       <Certification />

@@ -1,7 +1,8 @@
-import FlipWords from "../components/flip-words";
+import React from "react";
+import FlipWords from "../../components/ui/flip-words";
 import { Link } from "react-router";
 import { ArrowRight } from "lucide-react";
-import Icons from "../components/Icons";
+import Icons from "../Icons"
 import { motion } from "framer-motion";
 import "@fontsource/birthstone";
 
@@ -84,3 +85,5 @@ export function FlipWordsDemo() {
     </motion.div>
   );
 }
+
+export default FlipWordsDemo

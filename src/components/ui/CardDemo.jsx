@@ -1,7 +1,7 @@
 "use client";
 import { animate, motion } from "motion/react";
 import React, { useEffect } from "react";
-import { cn } from "../lib/utils";
+import { cn } from "../../lib/utils";
 import { FaReact } from "react-icons/fa6";
 import { RiTailwindCssFill } from "react-icons/ri";
 import { DiJavascript1 } from "react-icons/di";

@@ -1,19 +1,19 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router";
-import Timeline from "../components/Timeline";
+import Timeline from "../../components/ui/Timeline"
 
 // Images
-import AiTeacha from "../Image/aiteacha.png";
-import WebInfluencers from "../Image/WebInfluencers.png";
-import Imotalenthub from "../Image/imotalenthub.png";
-import Eyeonimo from "../Image/eyeonimo.png";
-import Techsoma from "../Image/techsomaafrica.png";
-import Positivus from "../Image/positivus.png";
-import Echo from "../Image/echo.png";
-import Unsplash from "../Image/Unsplash.png";
-import grocerly from "../Image/grocerly1.png";
-import Spotify from "../Image/spotify.jpeg";
+import AiTeacha from "../../Image/aiteacha.png";
+import WebInfluencers from "../../Image/WebInfluencers.png";
+import Imotalenthub from "../../Image/imotalenthub.png";
+import Eyeonimo from "../../Image/eyeonimo.png";
+import Techsoma from "../../Image/techsomaafrica.png";
+import Positivus from "../../Image/positivus.png";
+import Echo from "../../Image/echo.png";
+import Unsplash from "../../Image/Unsplash.png";
+import grocerly from "../../Image/grocerly1.png";
+import Spotify from "../../Image/spotify.jpeg";
 
 // Animation variants
 const containerVariants = {

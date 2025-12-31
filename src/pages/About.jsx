@@ -6,6 +6,8 @@ import { CiLocationOn } from "react-icons/ci";
 import { motion } from "framer-motion";
 import "@fontsource/birthstone";
 import Logo from "../components/Logo";
+import Footercta from "../components/Footercta";
+import Footer from "../components/Footer";
 // import ToggleTextComponent from "../components/ToggleTextComponent";
 
 const About = () => {
@@ -30,7 +32,7 @@ const About = () => {
   };
 
   return (
-    <section className="bg-gradient-to-br from-black via-[#111] to-black text-stone-400 pb-20">
+    <section className="bg-black text-neutral-500">
       {/* Slide-Up Animation */}
       <div className="animate-slideUp h-[100vh] g-gradient-to-br from-black via-[red] to-black z-50" />
 
@@ -240,6 +242,9 @@ const About = () => {
           <div>
             <Download />
           </div>
+
+          <Footercta />
+          <Footer />
         </>
       )}
     </section>

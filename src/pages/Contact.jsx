@@ -3,7 +3,7 @@ import { Link } from "react-router";
 import Icons from "../components/Icons";
 import Form from "../components/Form";
 import { motion } from "framer-motion";
-import { DotBackgroundDemo } from "../components/DotBackgroundDemo";
+// import { DotBackgroundDemo } from "../components/ui/DotBackgroundDemo";
 
 // Container (stagger)
 const containerVariants = {
@@ -41,7 +41,6 @@ const Contact = () => {
       <div className="animate-slideUp lg:h-[100vh] h-[100vh] bg-gradient-to-br from-black via-[#111] to-black relative z-100"></div>
 
       <div className="lg:flex lg:justify-around lg:items-center lg:ml-20 lg:mt-[-100vh] lg:h-[100vh] -mt-[100vh] md:mt-[-70%] md:ml-[5%] ml-5 mr-5">
-        
         {/* LEFT CONTENT */}
         <motion.aside
           className="flex gap-5 mt-20 lg:mt-0"
@@ -51,7 +50,6 @@ const Contact = () => {
           viewport={{ once: true, amount: 0.3 }}
         >
           <div className="flex flex-col">
-            
             <motion.h1
               variants={itemVariants}
               className="text-[#ECE7E1] lg:text-[12rem] md:text-[10rem] text-[7rem] Birthstone"
