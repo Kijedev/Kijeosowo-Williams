@@ -32,7 +32,7 @@ const About = () => {
   return (
     <section className="bg-gradient-to-br from-black via-[#111] to-black text-stone-400 pb-20">
       {/* Slide-Up Animation */}
-      <div className="animate-slideUp h-[100vh] g-gradient-to-br from-black via-[#111] to-black z-50" />
+      <div className="animate-slideUp h-[100vh] g-gradient-to-br from-black via-[red] to-black z-50" />
 
       {showContent && (
         <>

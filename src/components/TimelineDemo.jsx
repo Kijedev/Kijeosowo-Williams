@@ -1,7 +1,9 @@
 import React from "react";
-import Timeline from "../components/Timeline";
+import { motion } from "framer-motion";
 import { Link } from "react-router";
-// images
+import Timeline from "../components/Timeline";
+
+// Images
 import AiTeacha from "../Image/aiteacha.png";
 import WebInfluencers from "../Image/WebInfluencers.png";
 import Imotalenthub from "../Image/imotalenthub.png";
@@ -13,268 +15,183 @@ import Unsplash from "../Image/Unsplash.png";
 import grocerly from "../Image/grocerly1.png";
 import Spotify from "../Image/spotify.jpeg";
 
+// Animation variants
+const containerVariants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.2,
+      delayChildren: 0.15,
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: {
+    opacity: 0,
+    y: 40,
+    scale: 0.95,
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    scale: 1,
+    transition: {
+      duration: 0.6,
+      ease: "easeOut",
+    },
+  },
+};
+
 export function TimelineDemo() {
   const data = [
     {
       title: "Web Apps",
       content: (
-        <div>
-          <div className="grid lg:grid-cols-2 gap-4">
-            <Link
-              target="_blank"
-              className="cursor-pointer"
-              to="https://www.aiteacha.com/"
-            >
-              <img
-                src={AiTeacha}
-                alt="AiTeacha"
-                width={500}
-                height={500}
-                className="rounded-xl hover:scale-105 ease-in-out duration-500"
-              />
-              <h1 className="text-white font-bold text-3xl mt-2">AiTeacha</h1>
-              <p className="text-sm mt-2 text-neutral-600">
-                Built with all AI tools to aid teachers day-to-day tasks to
-                improve students outcome
-              </p>
-            </Link>
-            <Link
-              target="_blank"
-              className="cursor-pointer"
-              to="https://www.webinfluencers.org/"
-            >
-              <img
-                src={WebInfluencers}
-                alt="webinfluencers"
-                width={500}
-                height={500}
-                className="rounded-xl hover:scale-105 ease-in-out duration-500"
-              />
-              <h1 className="text-white font-bold text-3xl mt-2">
-                WebInfluencers
-              </h1>
-              <p className="text-sm mt-2 text-neutral-600">
-                From strategic communications and AI innovation to talent
-                platforms and media publishing
-              </p>
-            </Link>
-            <Link
-              target="_blank"
-              className="cursor-pointer"
-              to="https://www.imotalenthub.com/"
-            >
-              <img
-                src={Imotalenthub}
-                alt="Imotalenthub"
-                width={500}
-                height={500}
-                className="rounded-xl hover:scale-105 ease-in-out duration-500"
-              />
-              <h1 className="text-white font-bold text-3xl mt-2">
-                Imo Talent-Hub
-              </h1>
-              <p className="text-sm mt-2 text-neutral-600">
-                Connecting Imo's brightest minds with global opportunities
-              </p>
-            </Link>
-            <Link
-              target="_blank"
-              className="cursor-pointer"
-              to="https://www.eyeonimo.com/"
-            >
-              <img
-                src={Eyeonimo}
-                alt="Eyeonimo"
-                width={500}
-                height={500}
-                className="rounded-xl hover:scale-105 ease-in-out duration-500"
-              />
-              <h1 className="text-white font-bold text-3xl mt-2">Eyeonimo</h1>
-              <p className="text-sm mt-2 text-neutral-600">
-                Nigeria's Premier Investment Destination in the Heart of the
-                Eastern Region
-              </p>
-            </Link>
-            <Link
-              target="_blank"
-              className="cursor-pointer"
-              to="https://www.techsoma.africa/"
-            >
-              <img
-                src={Techsoma}
-                alt="Techsoma"
-                width={500}
-                height={500}
-                className="rounded-xl hover:scale-105 ease-in-out duration-500"
-              />
-              <h1 className="text-white font-bold text-3xl mt-2">
-                Techsoma Africa
-              </h1>
-              <p className="text-sm mt-2 text-neutral-600">
-                Your ultimate source for insights on Africa’s thriving tech
-                ecosystem.
-              </p>
-            </Link>
-            <Link
-              target="_blank"
-              className="cursor-pointer"
-              to="https://positivusco.netlify.app/"
-            >
-              <img
-                src={Positivus}
-                alt="Positivus"
-                width={500}
-                height={500}
-                className="rounded-xl hover:scale-105 ease-in-out duration-500"
-              />
-              <h1 className="text-white font-bold text-3xl mt-2">Positivus</h1>
-              <p className="text-sm mt-2 text-neutral-600">
-                A comprehensive digital marketing agency website that helps
-                businesses grow...
-              </p>
-            </Link>
-            <Link
-              target="_blank"
-              className="cursor-pointer"
-              to="https://echoomusicapp.netlify.app/"
-            >
-              <img
-                src={Echo}
-                alt="Echo"
-                width={500}
-                height={500}
-                className="rounded-xl hover:scale-105 ease-in-out duration-500"
-              />
-              <h1 className="text-white font-bold text-3xl mt-2">Echo</h1>
-              <p className="text-sm mt-2 text-neutral-600">
-                Say goodbye to interruptions and enjoy uninterrupted music
-                streaming.
-              </p>
-            </Link>
-            <Link
-              target="_blank"
-              className="cursor-pointer"
-              to="https://kijeunsplash.netlify.app/"
-            >
-              <img
-                src={Unsplash}
-                alt="Unsplash"
-                width={500}
-                height={500}
-                className="rounded-xl hover:scale-105 ease-in-out duration-500"
-              />
-              <h1 className="text-white font-bold text-3xl mt-2">
-                Unsplash Web
-              </h1>
-              <p className="text-sm mt-2 text-neutral-600">
-                A sophisticated image gallery mobile app replicating Unsplash
-                features.
-              </p>
-            </Link>
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+        >
+          <div className="grid lg:grid-cols-2 gap-6">
+            {[
+              {
+                img: AiTeacha,
+                title: "AiTeacha",
+                link: "https://www.aiteacha.com/",
+                desc:
+                  "Built with AI tools to aid teachers day-to-day tasks and improve student outcomes.",
+              },
+              {
+                img: WebInfluencers,
+                title: "WebInfluencers",
+                link: "https://www.webinfluencers.org/",
+                desc:
+                  "Strategic communications, AI innovation, talent platforms, and media publishing.",
+              },
+              {
+                img: Imotalenthub,
+                title: "Imo Talent-Hub",
+                link: "https://www.imotalenthub.com/",
+                desc:
+                  "Connecting Imo’s brightest minds with global opportunities.",
+              },
+              {
+                img: Eyeonimo,
+                title: "Eyeonimo",
+                link: "https://www.eyeonimo.com/",
+                desc:
+                  "Nigeria’s premier investment destination in the Eastern Region.",
+              },
+              {
+                img: Techsoma,
+                title: "Techsoma Africa",
+                link: "https://www.techsoma.africa/",
+                desc:
+                  "Insights on Africa’s thriving tech ecosystem.",
+              },
+              {
+                img: Positivus,
+                title: "Positivus",
+                link: "https://positivusco.netlify.app/",
+                desc:
+                  "A digital marketing agency website focused on growth.",
+              },
+              {
+                img: Echo,
+                title: "Echo",
+                link: "https://echoomusicapp.netlify.app/",
+                desc:
+                  "An uninterrupted music streaming experience.",
+              },
+              {
+                img: Unsplash,
+                title: "Unsplash Web",
+                link: "https://kijeunsplash.netlify.app/",
+                desc:
+                  "A sophisticated Unsplash-style image gallery app.",
+              },
+            ].map((item, index) => (
+              <motion.div key={index} variants={itemVariants}>
+                <Link
+                  to={item.link}
+                  target="_blank"
+                  className="block cursor-pointer"
+                >
+                  <img
+                    src={item.img}
+                    alt={item.title}
+                    className="rounded-xl hover:scale-105 transition-transform duration-500"
+                  />
+                  <h1 className="text-white font-bold text-3xl mt-3">
+                    {item.title}
+                  </h1>
+                  <p className="text-sm mt-2 text-neutral-600">
+                    {item.desc}
+                  </p>
+                </Link>
+              </motion.div>
+            ))}
           </div>
-        </div>
+        </motion.div>
       ),
     },
+
     {
       title: "Mobile Apps",
       content: (
-        <div>
-          <div className="grid lg:grid-cols-2 gap-4">
-            <Link
-              target="_blank"
-              className="cursor-pointer"
-              to="https://github.com/Kijeosowo/Grocerly"
-            >
-              <img
-                src={grocerly}
-                alt="grocerly"
-                width={200}
-                height={200}
-                className="rounded-xl hover:scale-105 ease-in-out duration-500"
-              />
-              <h1 className="text-white font-bold text-3xl mt-2">Grocerly</h1>
-              <p className="text-sm mt-2 text-neutral-600">
-                Grocerly is a comprehensive grocery delivery mobile application
-                built with Expo and React Native, designed to provide a seamless
-                online grocery shopping and delivery experience.
-              </p>
-            </Link>
-            <Link
-              target="_blank"
-              className="cursor-pointer"
-              to="https://github.com/Kijeosowo/Grocerly"
-            >
-              <img
-                src={Spotify}
-                alt="spotify"
-                width={150}
-                height={150}
-                className="rounded-xl hover:scale-105 ease-in-out duration-500"
-              />
-              <h1 className="text-white font-bold text-3xl mt-2">
-                Spotify-wrapped
-              </h1>
-              <p className="text-sm mt-2 text-neutral-600">
-                Built my spotify wrapped with the same logic, UI and animations
-                as the original.
-              </p>
-            </Link>
-            {/* <img
-              src="https://assets.aceternity.com/pro/bento-grids.png"
-              alt="bento template"
-              width={500}
-              height={500}
-              className="rounded-xl"
-            />
-            <img
-              src="https://assets.aceternity.com/cards.png"
-              alt="cards template"
-              width={500}
-              height={500}
-              className="rounded-xl"
-            /> */}
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+        >
+          <div className="grid lg:grid-cols-2 gap-6">
+            {[
+              {
+                img: grocerly,
+                title: "Grocerly",
+                link: "https://github.com/Kijeosowo/Grocerly",
+                desc:
+                  "A grocery delivery app built with Expo and React Native.",
+              },
+              {
+                img: Spotify,
+                title: "Spotify Wrapped",
+                link: "https://github.com/Kijeosowo/Grocerly",
+                desc:
+                  "A Spotify Wrapped clone with original UI and animations.",
+              },
+            ].map((item, index) => (
+              <motion.div key={index} variants={itemVariants}>
+                <Link
+                  to={item.link}
+                  target="_blank"
+                  className="block cursor-pointer"
+                >
+                  <img
+                    src={item.img}
+                    alt={item.title}
+                    width={200}
+                    height={200}
+                    className="rounded-xl hover:scale-105 transition-transform duration-500"
+                  />
+                  <h1 className="text-white font-bold text-3xl mt-3">
+                    {item.title}
+                  </h1>
+                  <p className="text-sm mt-2 text-neutral-600">
+                    {item.desc}
+                  </p>
+                </Link>
+              </motion.div>
+            ))}
           </div>
-        </div>
+        </motion.div>
       ),
     },
-    // {
-    //   title: "Changelog",
-    //   content: (
-    //     <div>
-    //       <div className="grid lg:grid-cols-2 gap-4">
-    //         <img
-    //           src="https://assets.aceternity.com/pro/hero-sections.png"
-    //           alt="hero template"
-    //           width={500}
-    //           height={500}
-    //           className="rounded-xl"
-    //         />
-    //         <img
-    //           src="https://assets.aceternity.com/features-section.png"
-    //           alt="feature template"
-    //           width={500}
-    //           height={500}
-    //           className="rounded-xl"
-    //         />
-    //         <img
-    //           src="https://assets.aceternity.com/pro/bento-grids.png"
-    //           alt="bento template"
-    //           width={500}
-    //           height={500}
-    //           className="rounded-xl"
-    //         />
-    //         <img
-    //           src="https://assets.aceternity.com/cards.png"
-    //           alt="cards template"
-    //           width={500}
-    //           height={500}
-    //           className="rounded-xl"
-    //         />
-    //       </div>
-    //     </div>
-    //   ),
-    // },
   ];
+
   return (
     <div className="relative w-full overflow-clip">
       <Timeline data={data} />
