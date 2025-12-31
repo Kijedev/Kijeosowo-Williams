@@ -2,7 +2,7 @@ import React from "react";
 import FlipWords from "../../components/ui/flip-words";
 import { Link } from "react-router";
 import { ArrowRight } from "lucide-react";
-import Icons from "../Icons"
+import Icons from "../Icons";
 import { motion } from "framer-motion";
 import "@fontsource/birthstone";
 
@@ -47,11 +47,10 @@ export function FlipWordsDemo() {
       {/* Heading */}
       <motion.div
         variants={itemVariants}
-        className="lg:text-7xl text-5xl text-neutral-500 dark:text-neutral-500 text-center"
+        className="lg:text-8xl text-5xl text-neutral-700 dark:text-neutral-700 lg:text-left text-center lg:px-56 font-light"
       >
-        Build <FlipWords words={words} /> websites <br />
-        and mobile apps with <br />
-        <span className="text-[#ECE7E1] Birthstone">Kije Williams</span>
+        Build <FlipWords words={words} /> websites and mobile apps with <br />
+        <span className="text-[#fff] font-light">Kije Williams</span>
       </motion.div>
 
       {/* Paragraph */}
@@ -86,4 +85,4 @@ export function FlipWordsDemo() {
   );
 }
 
-export default FlipWordsDemo
+export default FlipWordsDemo;
