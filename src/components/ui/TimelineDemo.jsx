@@ -159,7 +159,7 @@ export function TimelineDemo() {
               {
                 img: Spotify,
                 title: "Spotify Wrapped",
-                link: "https://github.com/Kijeosowo/Grocerly",
+                link: "https://github.com/Kijedev/spotify-wrapped/tree/spotify",
                 desc:
                   "A Spotify Wrapped clone with original UI and animations.",
               },
