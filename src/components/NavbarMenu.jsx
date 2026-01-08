@@ -10,12 +10,6 @@ import { LiaCertificateSolid } from "react-icons/lia";
 
 const navItems = [
   { name: "About", path: "/about", scrollId: null, icon: <CiUser /> },
-  // {
-  //   name: "Articles",
-  //   path: "/articles",
-  //   scrollId: "blogpost",
-  //   icon: <IoBookOutline />,
-  // },
   {
     name: "Projects",
     path: "/projects",
@@ -59,7 +53,7 @@ const NavbarMenu = () => {
         className="
       mx-auto
       mt-4
-      max-w-6xl
+      max-w-7xl
       px-6 py-6
       flex items-center justify-between
       rounded-full
